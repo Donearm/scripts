@@ -1,0 +1,13 @@
+/* Print CSS rules for local Markdown files converted to HTML.
+ * Basically it underlines, boldens and shows in its entirety href links
+*/
+
+a:link:after, a:visited:after {
+	content: " (" attr(href) ") ";
+	font-size: 90%;
+}
+a:link, a:visited {
+	font-weight: bold;
+	text-decoration: underline;
+	color: #770000;
+}
