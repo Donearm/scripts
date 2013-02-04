@@ -17,8 +17,8 @@ tmux new-session -d -n "$1" -s "$1" /bin/bash
 # cd into project's path (main pane)
 tmux send-keys "cd $2" C-m
 
-# Split horizontally
-tmux split-window -v -c "$2"
+# Split vertically 
+tmux split-window -h -c "$2"
 
 # Attach the new session
 tmux attach-session -t "$1"
