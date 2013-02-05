@@ -9,7 +9,7 @@ DIR='/media/private'
 PARTITION='/dev/sdb12'
 
 case $1 in
-    umount) sudo systemctl start mpd.service;
+    umount) sudo systemctl stop mpd.service;
 		sudo umount -f $DIR
 		wait
 	    sudo $CRYPTS luksClose $MAPPER
