@@ -1,25 +1,16 @@
-#!/bin/bash
+#!/bin/sh
 
-# Start script for dwm with statusbar info too
+# Start script for dwm
 
 eval `cat ~/.fehbg`
 
 xbindkeys
-xset m 1 1
-slock &
+xset m 0.7 2
+xset dpms 0 900 2750
 
 urxvtd -q -o -f
 if [ $? -eq 0 ]; then
 	urxvtc
 fi
 
-stalonetray &
-volwheel &
-
-
-while true
-do
-	echo `date +"[%a %d %b] [%H:%M:%S]"`
-	sleep 2
-done &
 exec dwm
