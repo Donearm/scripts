@@ -9,8 +9,5 @@ xset m 0.7 2
 xset dpms 0 900 2750
 
 urxvtd -q -o -f
-if [ $? -eq 0 ]; then
-	urxvtc
-fi
 
 exec dwm
