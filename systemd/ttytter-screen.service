@@ -1,0 +1,16 @@
+[Unit]
+Description=TTYtter under screen
+Requires=wicd.service
+After=wicd.service
+After=ntpdq.service
+
+[Service]
+ExecStart=/usr/bin/screen -dm -c %h/.screenrc-ttytter
+StandardOutput=syslog
+StandardError=syslog
+Type=forking
+Restart=always
+User=gianluca
+
+[Install]
+WantedBy=multi-user.target

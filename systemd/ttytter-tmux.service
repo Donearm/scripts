@@ -1,0 +1,22 @@
+[Unit]
+Description=TTYtter under tmux
+# network for desktop, wicd for laptop
+Requires=network.service
+#Requires=wicd.service
+After=network.service
+#After=wicd.service
+After=ntpdq.service
+
+[Service]
+ExecStart=/usr/bin/tmux new-session -d -s TTYtter -n TTYtter '/usr/bin/ttytter -rc=-donearm'
+ExecStartPost=/usr/bin/tmux select-window -t TTYtter:0
+ExecStop=/usr/bin/tmux kill-session -t TTYtter
+StandardOutput=syslog
+StandardError=syslog
+Type=forking
+Restart=always
+User=gianluca
+Environment=DISPLAY=:0.0
+
+[Install]
+WantedBy=multi-user.target
