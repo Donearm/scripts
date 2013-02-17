@@ -10,4 +10,9 @@ xset dpms 0 900 2750
 
 urxvtd -q -o -f
 
+while true; do
+	xsetroot -name "$(dwmstatus)"
+	sleep 10
+done &
+
 exec dwm
