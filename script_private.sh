@@ -6,7 +6,7 @@ MAPPER='private'
 CRYPTS=$(which cryptsetup)
 PWDTMP="/tmp/pwd.tmp"
 DIR='/media/private'
-PARTITION='/dev/sdb12'
+PARTITION='/dev/sdb2'
 
 case $1 in
     umount) sudo systemctl stop mpd.service;
