@@ -4,7 +4,7 @@
 # pianobar's config file with a working USA proxy
 
 CONFIG="${HOME}/.config/pianobar/config"
-PROXYCHECK='/mnt/documents/Script/script_proxy_checker.sh'
+PROXYCHECK='/mnt/d/Script/script_proxy_checker.sh'
 IP=$1
 PORT=$2
 

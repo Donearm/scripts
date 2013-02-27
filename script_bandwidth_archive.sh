@@ -3,7 +3,7 @@
 PROCDEV='/proc/net/dev'
 ETH='eth0'
 OUTFILE="$HOME/.tiddlywiki/data/bandwidth_statistics.txt"
-BCKPFILE="/mnt/documents/Stuff/net_data_statistics.txt"
+BCKPFILE="/mnt/d/Stuff/net_data_statistics.txt"
 
 TOTDOWN=`grep $ETH $PROCDEV | awk '{print $2}' | sed 's/\(.*\:\)\([0-9]*\)/\2/g'`
 TOTUP=`grep $ETH $PROCDEV | awk '{print $10}'`

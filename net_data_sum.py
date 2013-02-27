@@ -23,7 +23,7 @@ date = re.compile('^(?P<date>\d+):') # matches the date
 up = re.compile("Up.(?P<up>\d+).+") # matches the up total
 down = re.compile("Down.(?P<down>\d+).+") # matches the down total
 
-net_data = open("/mnt/documents/Stuff/net_data_statistics.txt", "r")
+net_data = open("/mnt/d/Stuff/net_data_statistics.txt", "r")
 
 lines = net_data.readlines() # read each file's line
 
@@ -67,6 +67,6 @@ for line in lines:
             newLines.append(whole_lines[-1])
 
 # At this point, the file should have been corrected, write back to it
-with open("/mnt/documents/Stuff/net_data_statistics.txt", "w") as net_data:
+with open("/mnt/d/Stuff/net_data_statistics.txt", "w") as net_data:
     for elements in newLines:
         net_data.write(elements + "\n")

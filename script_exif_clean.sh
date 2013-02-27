@@ -2,7 +2,7 @@
 
 # Using imgtags.py, clean images of every EXIF tags
 
-IMGTAGS='/mnt/documents/Script/imgtags.py'
+IMGTAGS='/mnt/d/Script/imgtags.py'
 
 for i in "$@"; do
 	$IMGTAGS -i "${i}" -d;

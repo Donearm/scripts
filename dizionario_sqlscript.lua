@@ -5,14 +5,14 @@
 -- @copyright 2011-2013, Gianluca Fiore <forod.g@gmail.com>
 --
 
-package.path = "/mnt/documents/Script/lib/?.lua;" .. package.path
+package.path = "/mnt/d/Script/lib/?.lua;" .. package.path
 local os = require("os")
 local ansicolors = require("ansicolors")
 
 local DICTIONARY
 local LANGUAGE
 local WORD
-local DICTIONARY = '/mnt/documents/Lingue/dictionary.db'
+local DICTIONARY = '/mnt/d/Lingue/dictionary.db'
 
 ---Help message
 function help()

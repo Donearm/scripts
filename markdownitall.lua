@@ -5,7 +5,7 @@
 -- @copyright 2012-2013, Gianluca Fiore <forod.g@gmail.com>
 --
 
-package.path = "/mnt/documents/Script/lib/?.lua;" .. package.path
+package.path = "/mnt/d/Script/lib/?.lua;" .. package.path
 local markdown = require("markdown") -- that's the markdown.lua implementation from http://www.frykholm.se/files/markdown.lua
 local lfs = require("lfs")
 
@@ -46,8 +46,8 @@ function generate_html_header(v)
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<title>]]
 	local html2 = [[</title> 
-	<link rel="stylesheet" type="text/css" href="file:///mnt/documents/Script/lib/markdown.css" />
-	<link rel="stylesheet" type="text/css" media="print" href="file:///mnt/documents/Script/lib/markdown-print.css" />
+	<link rel="stylesheet" type="text/css" href="file:///mnt/d/Script/lib/markdown.css" />
+	<link rel="stylesheet" type="text/css" media="print" href="file:///mnt/d/Script/lib/markdown-print.css" />
 </head>
 <body>
 ]]
