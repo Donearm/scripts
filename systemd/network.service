@@ -1,0 +1,19 @@
+[Unit]
+Description=Static IP Connectivity
+Wants=network.target
+Before=network.target
+BindsTo=sys-subsystem-net-devices-enp4s0.device
+After=sys-subsystem-net-devices-enp4s0.device
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/sbin/ip link set dev enp4s0 up
+ExecStart=/sbin/ip addr add 192.168.1.2/24 dev enp4s0
+ExecStart=/sbin/ip route add default via 192.168.1.1
+
+ExecStop=/sbin/ip addr flush dev enp4s0
+ExecStop=/sbin/ip link set dev enp4s0 down
+
+[Install]
+WantedBy=multi-user.target
