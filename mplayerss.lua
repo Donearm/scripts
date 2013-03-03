@@ -9,8 +9,8 @@
 local cairo_pid = io.popen('ps -C cairo-compmgr -o pid='):read()
 local compton_pid = io.popen('ps -C compton -o pid='):read()
 local xscreensaver_pid = io.popen('ps -C xscreensaver -o pid='):read()
-local xset_off = { 'xset -dpms', 'xset s off' }
-local xset_on = { 'xset +dpms', 'xset s on' }
+local xset_off = { 'os.execute(xset -dpms)', 'os.execute(xset s off)' }
+local xset_on = { 'os.execute(xset +dpms)', 'os.execute(xset s on)' }
 
 ---Kill xscreensaver daemon if it's running
 function kill_screensaver()
@@ -29,8 +29,8 @@ end
 ---Disable/Enable DPMS settings and screensaver
 --@param t A table containing the xset commands to execute
 function dpms(t)
-	for c in pairs(t) do
-		os.execute(c)
+	for _,c in pairs(t) do
+		load(c)
 	end
 end
 
@@ -49,6 +49,8 @@ function main()
 	dpms(xset_off)
 	local mp = os.execute('mplayer ' .. arg[1] .. ' > /dev/null 2>&1')
 	local mplayer_pid = io.popen('ps -C mplayer -o pid=')
+	-- re-enable dpms and screensaver
+	dpms(xset_on)
 end
 
 main()
