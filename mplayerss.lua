@@ -47,7 +47,7 @@ function main()
 	end
 	-- disable dpms and screensaver
 	dpms(xset_off)
-	local mp = os.execute('mplayer ' .. arg[1] .. ' > /dev/null 2>&1')
+	local mp = os.execute('mplayer \'' .. arg[1] .. '\' > /dev/null 2>&1')
 	local mplayer_pid = io.popen('ps -C mplayer -o pid=')
 	-- re-enable dpms and screensaver
 	dpms(xset_on)
