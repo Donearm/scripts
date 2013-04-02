@@ -34,23 +34,47 @@ function dpms(t)
 	end
 end
 
+---Kill/Activate a composite manager
+--@param action the action to be done, can be either "kill" or --"activate"
+--@param manager the composite manager name (currently, either cairo or --compton)
+function compositing(action, manager)
+	if action == "kill" then
+		if cairo_pid then
+			local cairo = os.execute('kill -9 ' .. cairo_pid)
+		end
+		if xscreensaver_pid then
+		--	kill_screensaver()
+			deactivate_screensaver()
+		end
+		if compton_pid then
+			local compton = os.execute('kill -9 ' .. compton_pid)
+		end
+	elseif action == "activate" then
+		if manager == "cairo" then
+			local cairo_new = os.execute("cairo-compmgr")
+		elseif manager == "compton" then
+			local compton_new = os.execute("compton --config ~/.config/compton.conf")
+		else
+			return
+		end
+	else
+		return
+	end
+end
+
+
+
 function main()
-	if cairo_pid then
-		local cairo = os.execute('kill -9 ' .. cairo_pid)
-	end
-	if xscreensaver_pid then
-	--	kill_screensaver()
-		deactivate_screensaver()
-	end
-	if compton_pid then
-		local compton = os.execute('kill -9 ' .. compton_pid)
-	end
+	-- disable any composite manager
+	compositing("kill")
 	-- disable dpms and screensaver
 	dpms(xset_off)
 	local mp = os.execute('mplayer \'' .. arg[1] .. '\' > /dev/null 2>&1')
 	local mplayer_pid = io.popen('ps -C mplayer -o pid=')
 	-- re-enable dpms and screensaver
 	dpms(xset_on)
+	-- re-enable the composite manager
+	compositing("activate", "compton")
 end
 
 main()
