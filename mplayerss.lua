@@ -75,6 +75,9 @@ function main()
 	dpms(xset_on)
 	-- re-enable the composite manager
 	compositing("activate", "compton")
+	if mplayer_pid then
+		local km = os.execute("kill -9 " .. mplayer_pid)
+	end
 end
 
 main()
