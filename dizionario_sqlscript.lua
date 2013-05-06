@@ -27,7 +27,7 @@ end
 --@param s The string to escape its quotes
 function escape_quotes(s)
 	if s:match("%'") then
-		return string.gsub(s, "%'", "%'%'")
+		return string.gsub(s, "%'", "%1%1")
 	else
 		return s
 	end
