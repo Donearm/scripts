@@ -31,7 +31,7 @@ case $1 in
 						sudo systemctl start mpd.service
 						notify-send "Private partition mounted and ready!"
 					else
-						return 1
+						exit 1
 					fi
 				else
 					sudo $CRYPTS  luksOpen $PARTITION $MAPPER
@@ -40,7 +40,7 @@ case $1 in
 						sudo systemctl start mpd.service
 						notify-send "Private partition mounted and ready!"
 					else
-						return 1
+						exit 1
 					fi
 				fi
 			fi
