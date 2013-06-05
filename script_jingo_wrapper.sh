@@ -2,6 +2,6 @@
 
 # A wrapper to quickly launch a personal Jingo wiki
 
-jingo -c /mnt/c/Projects/Kortirion_wikis/Viaggi/config.yaml
+jingo -c /mnt/c/Projects/Kortirion_wikis/config.yaml
 
 exit 0
