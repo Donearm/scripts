@@ -1,0 +1,13 @@
+[Unit]
+Description=go-notify-me notification script for MPD
+Wants=mpd.service
+After=mpd.service
+
+[Service]
+Type=forking
+PIDFile=/var/run/go-notify-me.pid
+Restart=on-failure
+ExecStart=/usr/local/bin/go-notify-me
+
+[Install]
+WantedBy=multi-user.target
