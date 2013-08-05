@@ -12,19 +12,13 @@ git init
 git remote add origin $REPO
 git pull origin master
 
-function rsync_files() {
-	rsync --exclude ".git/" --exclude "README.md*" -av . ~
+function link_files() {
+	for i in .*; do
+		ln -s ${REPODIR}$i ~/$1
+	done
 }
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
-	rsync_files
-else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
-	echo
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		rsync_files
-	fi
-fi
+link_files
 
 source ~/.bash_profile
 
