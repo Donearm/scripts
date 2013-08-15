@@ -6,6 +6,7 @@
 -- @copyright 2011-2013, Gianluca Fiore <forod.g@gmail.com>
 --
 
+local mplayer_cmd = "mpv" -- the MPlayer command. Using Mpv now
 local cairo_pid = io.popen('ps -C cairo-compmgr -o pid='):read()
 local compton_pid = io.popen('ps -C compton -o pid='):read()
 local xscreensaver_pid = io.popen('ps -C xscreensaver -o pid='):read()
@@ -69,8 +70,8 @@ function main()
 	compositing("kill")
 	-- disable dpms and screensaver
 	dpms(xset_off)
-	local mp = os.execute('mplayer \'' .. arg[1] .. '\' > /dev/null 2>&1')
-	local mplayer_pid = io.popen('ps -C mplayer -o pid=')
+	local mp = os.execute(mplayer_cmd .. '\'' .. arg[1] .. '\' > /dev/null 2>&1')
+	local mplayer_pid = io.popen('ps -C ' .. mplayer_cmd .. ' -o pid=')
 	-- re-enable dpms and screensaver
 	dpms(xset_on)
 	-- re-enable the composite manager
