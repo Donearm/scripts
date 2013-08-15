@@ -31,7 +31,7 @@ case $1 in
 						# start the mpd demon
 						sudo systemctl start mpd.service
 						sleep 5
-						$GONOTIFY 2&>1 >> ~/.xsession-errors &
+						$GONOTIFY &>> ~/.xsession-errors &
 						notify-send "Private partition mounted and ready!"
 					else
 						exit 1
@@ -42,7 +42,7 @@ case $1 in
 					if [ $? -eq 0 ]; then
 						sudo systemctl start mpd.service
 						sleep 5
-						$GONOTIFY 2&>1 >> ~/.xsession-errors &
+						$GONOTIFY &>> ~/.xsession-errors &
 						notify-send "Private partition mounted and ready!"
 					else
 						exit 1
