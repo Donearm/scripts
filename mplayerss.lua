@@ -6,7 +6,7 @@
 -- @copyright 2011-2013, Gianluca Fiore <forod.g@gmail.com>
 --
 
-local mplayer_cmd = "mplayer" -- the MPlayer command
+local mplayer_cmd = 'mplayer' -- the MPlayer command
 local cairo_pid = io.popen('ps -C cairo-compmgr -o pid='):read()
 local compton_pid = io.popen('ps -C compton -o pid='):read()
 local xscreensaver_pid = io.popen('ps -C xscreensaver -o pid='):read()
@@ -70,14 +70,14 @@ function main()
 	compositing("kill")
 	-- disable dpms and screensaver
 	dpms(xset_off)
-	local mp = os.execute(mplayer_cmd .. '\'' .. arg[1] .. '\' > /dev/null 2>&1')
-	local mplayer_pid = io.popen('ps -C ' .. mplayer_cmd .. ' -o pid=')
+	local mp = os.execute(mplayer_cmd .. ' \'' .. arg[1] .. '\' > /dev/null 2>&1')
+	local mplayer_pid = io.popen('ps -C ' .. mplayer_cmd .. ' -o pid='):read()
 	-- re-enable dpms and screensaver
 	dpms(xset_on)
 	-- re-enable the composite manager
 	compositing("activate", "compton")
 	if mplayer_pid then
-		local km = os.execute("kill -9 " .. mplayer_pid)
+		local km = os.execute('kill -9 ' .. mplayer_pid)
 	end
 end
 
