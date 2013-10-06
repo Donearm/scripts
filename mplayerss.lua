@@ -70,7 +70,7 @@ function main()
 	compositing("kill")
 	-- disable dpms and screensaver
 	dpms(xset_off)
-	local mp = os.execute(mplayer_cmd .. ' \'' .. arg[1] .. '\' > /dev/null 2>&1')
+	local mp = os.execute(mplayer_cmd .. ' \"' .. arg[1] .. '\" > /dev/null 2>&1')
 	local mplayer_pid = io.popen('ps -C ' .. mplayer_cmd .. ' -o pid='):read()
 	-- re-enable dpms and screensaver
 	dpms(xset_on)
