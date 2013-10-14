@@ -1,0 +1,12 @@
+[Unit]
+Description=Lock X session using slock before suspend
+Before=suspend.target
+
+[Service]
+User=gianluca
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/slock
+
+[Install]
+WantedBy=suspend.target
