@@ -176,6 +176,10 @@ Download a single file from a specific repository on Github
 
 Convert Dos/Unix newline format
 
+####script\_efi\_menu\_restore.sh
+
+Restore UEFI boot menu entries. Of course only those I use/care about
+
 ####script\_entropy.sh
 
 An entropy-generating script. I use this when I need to overwrite a partition or 
