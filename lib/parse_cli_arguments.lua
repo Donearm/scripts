@@ -2,7 +2,7 @@
 
 ---
 -- @author Gianluca Fiore
--- @copyright 2013, Gianluca Fiore <forod.g@gmail.com>
+-- @copyright 2014, Gianluca Fiore <forod.g@gmail.com>
 --
 
 function cli_parse(...)

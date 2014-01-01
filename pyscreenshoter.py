@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 ###############################################################################
-# Copyright (c) 2012-2013, Gianluca Fiore
+# Copyright (c) 2012-2014, Gianluca Fiore
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by

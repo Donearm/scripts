@@ -1,6 +1,6 @@
 #!/usr/bin/env lua
 
--- @copyright 2011-2013, Gianluca Fiore © <forod.g@gmail.com>
+-- @copyright 2011-2014, Gianluca Fiore © <forod.g@gmail.com>
 
 --- Converts seconds into minutes as MM:SS
 --@param secs the integer with the seconds

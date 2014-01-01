@@ -2,7 +2,7 @@
 
 ---
 -- @author Gianluca Fiore
--- @copyright 2012-2013, Gianluca Fiore <forod.g@gmail.com>
+-- @copyright 2012-2014, Gianluca Fiore <forod.g@gmail.com>
 --
 --
 -- Open a url with feh, if it leads to an image, or firefox, in all 

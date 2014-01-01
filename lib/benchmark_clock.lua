@@ -1,6 +1,6 @@
 #!/usr/bin/env lua
 
--- Copyright 2011-2013, Gianluca Fiore © <forod.g@gmail.com>
+-- Copyright 2011-2014, Gianluca Fiore © <forod.g@gmail.com>
 --
 local c = os.clock()
 local s = 0
