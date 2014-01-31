@@ -15,9 +15,13 @@ UTF8CODE=("\u0ed1" "\u10fb" "\u1ffc" "\u2020" "\u2022" "\u2023" "\u2024"
 # Make font double size
 F_VDOBLE="\033#6"
 
+echo -e "\n"
+
 for e in ${UTF8CODE[@]}; do
 	printf "${F_VDOBLE}${e} "
 #	echo -e "${F_VDOBLE}${e}"
 done
+
+echo -e "\n"
 
 exit 0
