@@ -30,7 +30,6 @@ case $1 in
 					if [ $? -eq 0 ]; then
 						# start the mpd demon
 						sudo systemctl start mpd.service
-						sleep 5
 						$GONOTIFY &>> ~/.xsession-errors &
 						notify-send "Private partition mounted and ready!"
 					else
@@ -41,7 +40,6 @@ case $1 in
 					sudo mount /dev/mapper/$MAPPER $DIR
 					if [ $? -eq 0 ]; then
 						sudo systemctl start mpd.service
-						sleep 5
 						$GONOTIFY &>> ~/.xsession-errors &
 						notify-send "Private partition mounted and ready!"
 					else
