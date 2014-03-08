@@ -6,7 +6,7 @@ MAPPER='private'
 CRYPTS=$(which cryptsetup)
 PWDTMP="/tmp/pwd.tmp"
 DIR='/media/private'
-PARTITION='/dev/sdb2'
+PARTITION='/dev/disk/by-uuid/9bfb2faa-b1bb-4a18-b500-e4a2e344267e'
 GONOTIFY=$(which go-notify-me)
 
 case $1 in
