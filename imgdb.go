@@ -320,7 +320,7 @@ func addRow(db *sql.DB, path string, used int) {
 }
 
 func main() {
-	dbpath := "/mnt/c/img.db"				// path of the db
+	dbpath := "/media/private/img/img.db"				// path of the db
 	rand.Seed(time.Now().UTC().UnixNano())	// Initialize random seed
 
 	flagsInit()
