@@ -15,7 +15,7 @@ func readLines(path string) ([]string, error) {
 	for scanner.Scan() {
 		lines = append(lines, scanner.Text())
 	}
-	return lines, Scanner.Err()
+	return lines, scanner.Err()
 }
 
 func writeLines(lines []string, path string) error {
@@ -26,8 +26,7 @@ func writeLines(lines []string, path string) error {
 	defer file.Close()
 
 	w := bufio.NewWriter(file)
-	for _, line := range lines {
-		fmt.Println(w, line)
+	for _, line := range lines { fmt.Println(w, line)
 	}
 	return w.Flush()
 }
