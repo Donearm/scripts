@@ -15,3 +15,9 @@ func returnHomeDir() string {
 		return ""
 	}
 }
+
+// return filename without the extension
+func basename(path string) string {
+	basename := filepath.Base(path)
+	return strings.TrimSuffix(basename, filepath.Ext(basename))
+}
