@@ -21,3 +21,8 @@ func basename(path string) string {
 	basename := filepath.Base(path)
 	return strings.TrimSuffix(basename, filepath.Ext(basename))
 }
+
+// Print text in bold on terminal
+func bold(t string) string {
+	return "\033[1m" + t + "\033[0m"
+}
