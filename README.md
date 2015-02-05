@@ -282,6 +282,10 @@ A libnotify notification for completed torrents in Transmission
 Tweets current playing song (from ncmpcpp) via TTYtter. This must be configured 
 already
 
+####script\_wd\_cryptousb.sh
+
+Mount an encrypted partition on a usb hd that I use for backups.
+
 ####script\_wifi\_control.sh
 
 Completely disable and power off the Atheros wifi card on the Asus 1005H netbook
