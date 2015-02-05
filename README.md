@@ -282,6 +282,15 @@ A libnotify notification for completed torrents in Transmission
 Tweets current playing song (from ncmpcpp) via TTYtter. This must be configured 
 already
 
+####script\_video\_thumbnails.sh
+
+This is a old script, but still working, that I used when I did some video 
+editing. Basically it generates an image containing informations such as 
+filename, size, lenght and codec of a video along with a series of thumbnails to 
+show off its content. I never tweaked it more than "black backround, fixed 
+spacing between thumbs" though, I just needed something that didn't force me to 
+depend on external programs.
+
 ####script\_wd\_cryptousb.sh
 
 Mount an encrypted partition on a usb hd that I use for backups.
