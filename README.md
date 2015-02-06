@@ -61,6 +61,12 @@ Print the current IP
 
 A very raw HD benchmark tool
 
+####imap\_check.py
+
+CLI unread count of my 2 GMail accounts. I used this as input for an AwesomeWM 
+widget before the gmail one from vicious was implemented. Nowadays it's 
+superfluous (and in need of refactoring...)
+
 ####imgtags.py
 
 Remove exiv tags from all the images in the current directory. People add all 
