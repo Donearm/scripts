@@ -15,6 +15,10 @@ Hash a SSL certificate
 Old script to post on Twitter with Basic Authentication. Need to be updated with 
 OAuth but I've since switched to TTYtter
 
+####dayoftheweek.py
+
+Not my script originally, I just made it Python 3.2 compatible
+
 ####delete\_by\_percentage.lua
 
 Delete a random choice of files in a directory by a given percentage. Seems 
