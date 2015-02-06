@@ -268,6 +268,10 @@ easily expanded for other players). The original script allowed only to rate
 songs in aptly named playlists (1 to 5) but this permits to use any name for the 
 playlist
 
+####script\_ripencode.sh
+
+Audio cd ripping script (to mp3, ogg or flac)
+
 ####script\_touchpad.sh
 
 Disable/enable the touchpad. When writing long texts on a laptop the fingers can 
