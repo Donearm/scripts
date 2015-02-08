@@ -6,7 +6,7 @@
 -- @copyright 2011-2014, Gianluca Fiore <forod.g@gmail.com>
 --
 
-local mplayer_cmd = 'mplayer' -- the MPlayer command
+local mplayer_cmd = 'mpv' -- the MPlayer command
 local cairo_pid = io.popen('ps -C cairo-compmgr -o pid='):read()
 local compton_pid = io.popen('ps -C compton -o pid='):read()
 local xscreensaver_pid = io.popen('ps -C xscreensaver -o pid='):read()

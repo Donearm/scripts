@@ -18,7 +18,7 @@ import (
 
 // Listing all possible app here as it's quicker to change them if using a
 // different program to accomplish the same things (like MPlayer/SMPlayer)
-const mplayerCmd string = "mplayer"
+const mplayerCmd string = "mpv"
 const screensaverCmd string = "xscreensaver"
 const cairoCmd string = "cairo-compmgr"
 const comptonCmd string = "compton"
