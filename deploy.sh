@@ -8,9 +8,12 @@ if [ ! -d $REPODIR ]; then
 fi
 
 cd $REPODIR
-git init
-git remote add origin $REPO
-git pull origin master
+
+function pull_repo() {
+	git init
+	git remote add origin $1
+	git pull origin master
+}
 
 function link_files() {
 	for i in .*; do
@@ -18,6 +21,7 @@ function link_files() {
 	done
 }
 
+pull_repo $REPO
 link_files
 
 source ~/.bash_profile
