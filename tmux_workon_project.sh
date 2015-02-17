@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Set up a working environment in a new tmux session for a project. 
 # Needs to be run like:
