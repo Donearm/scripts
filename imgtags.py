@@ -27,6 +27,7 @@ import pyexiv2
 
 
 def argument_parser():
+    """Argument parser"""
     cli_parser = argparse.ArgumentParser()
 
     cli_parser.add_argument("-f", "--force",

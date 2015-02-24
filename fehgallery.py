@@ -31,8 +31,10 @@ RSpaces = re.compile(r"\s+")
 
 
 def launch_gallery(stringlist, stringlist_ending=''):
-    # run feh on the final string; add --scale-down if you want the image to
-    # automatically scale to screen size if larger
+    """
+    Run feh on the final string
+    --scale-down will scale the images to screen size (if larger)
+    """
     try:
         gallery = subprocess.Popen("feh %s" % stringlist, shell=True)
         #gallery.wait() # wait for the first list of files to close
