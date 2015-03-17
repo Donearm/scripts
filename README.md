@@ -15,6 +15,12 @@ Hash a SSL certificate
 Old script to post on Twitter with Basic Authentication. Need to be updated with 
 OAuth but I've since switched to TTYtter
 
+####cortex\_reddits.py
+
+Browse (sub)reddits with the Reddit client cortex. Totally an hack, subscribing 
+them on Reddit is much easier but I didn't want to read all my subscriptions 
+each time so I wrote this script to choose what and when to browse
+
 ####dayoftheweek.py
 
 Not my script originally, I just made it Python 3.2 compatible
