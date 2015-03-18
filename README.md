@@ -128,6 +128,10 @@ of a clock (HH:MM:SS)
 
 Output a magnet link to a torrent file to save it for future re-use
 
+####make\_gif.sh
+
+Make a gif from a video using FFmpeg. Quick and Dirty (size, duration are hardencoded).
+
 ####markdownitall.lua
 
 Convert all markdown files in a path to html
