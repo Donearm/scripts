@@ -6,7 +6,6 @@ MAPPER='private'
 CRYPTS=$(which cryptsetup)
 PWDTMP="/tmp/pwd.tmp"
 DIR='/media/private'
-PARTITION='/dev/disk/by-uuid/9bfb2faa-b1bb-4a18-b500-e4a2e344267e'
 GONOTIFY=$(which go-notify-me)
 
 case $1 in
@@ -23,9 +22,15 @@ case $1 in
 			if [ ! -d $DIR ]; then
 				sudo mkdir -p $DIR
 			else
+				if [[ $HOSTNAME == "kortirion" ]]; then
+					partition='/dev/disk/by-uuid/9bfb2faa-b1bb-4a18-b500-e4a2e344267e'
+				else
+					partition='/dev/disk/by-uuid/2e319e6b-265c-448d-b2c4-e01691c8f88e'
+				fi
+
 				if [[ $DISPLAY != '' ]]; 
 					then
-					sudo $CRYPTS luksOpen $PARTITION $MAPPER
+					sudo $CRYPTS luksOpen $partition $MAPPER
 					sudo mount /dev/mapper/$MAPPER $DIR
 					if [ $? -eq 0 ]; then
 						# start the mpd demon
@@ -36,7 +41,7 @@ case $1 in
 						exit 1
 					fi
 				else
-					sudo $CRYPTS  luksOpen $PARTITION $MAPPER
+					sudo $CRYPTS  luksOpen $partition $MAPPER
 					sudo mount /dev/mapper/$MAPPER $DIR
 					if [ $? -eq 0 ]; then
 						sudo systemctl start mpd.service
