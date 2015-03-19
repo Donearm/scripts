@@ -2,11 +2,12 @@
 
 # Mount encrypted partition on a usb hd with a keyfile
 
-KEYFILE="/mnt/d/Stuff/ib_wd_usb.jpg"
+KEYFILE="~/d/Stuff/ib_wd_usb.jpg"
 CRYPTSETUP=$(which cryptsetup)
 
 if [[ $1 == 'mount' ]]; then
-	$CRYPTSETUP --key-file $KEYFILE luksOpen /dev/sdc2 cryptousb || exit 1
+	$CRYPTSETUP --key-file $KEYFILE luksOpen \
+		/dev/disk/by-uuid/0e3eb6ce-c45b-40a4-be54-23e70fdec707 cryptousb || exit 1
 	mkdir -p /media/cryptousb
 	mount /dev/mapper/cryptousb /media/cryptousb
 elif [[ $1 == 'umount' ]]; then
