@@ -2,8 +2,9 @@
 
 # Mount encrypted partition on a usb hd with a keyfile
 
-KEYFILE="~/d/Stuff/ib_wd_usb.jpg"
+KEYFILE="/home/gianluca/d/Stuff/ib_wd_usb.jpg"
 CRYPTSETUP=$(which cryptsetup)
+
 
 if [[ $1 == 'mount' ]]; then
 	$CRYPTSETUP --key-file $KEYFILE luksOpen \
