@@ -22,7 +22,7 @@ import sys
 import subprocess
 
 # Declare here the (sub)reddits
-REDDITS_IMG = ['unixporn', 'wallpaperdump', 'celebs', 'celebswallpaper', 'fashpics', 'models']
+REDDITS_IMG = ['unixporn', 'wallpaperdump']
 REDDITS_PROGRAMMING = ['compsci', 'programming', 'golang', 'awesomewm', 'archlinux', 'linux']
 REDDITS_VAR = ['linguistics', 'history', 'music', 'metal', 'fitness']
 
