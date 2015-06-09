@@ -196,6 +196,14 @@ A pretty basic, and not that useful, blog/site backup script
 references to files that are not present anymore on disk and thus save space. 
 Probably not useful today with >1TB disks but I hate wasting space
 
+####script\_disable\_touchpad.sh
+
+Launched at boot from your WM/DE, it detects thanks to xinput whether a 
+mouse is present or not and disable/enable the touchpad accordingly. It 
+goes along with the udev rules, completing it as with udev it can only 
+be detected when a mouse is plugged in or off, not when it's already 
+plugged in at boot. "Lachesis" is my mouse, of course
+
 ####script\_dl\_single\_github\_file.sh
 
 Download a single file from a specific repository on Github
