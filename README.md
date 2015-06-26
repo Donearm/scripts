@@ -119,6 +119,10 @@ Css for markdown files converted to html, printed or shown on screen
 
 A skeleton of a function parsing cli arguments in Lua
 
+####lib/prime\_numbers.go
+
+A generator of prime numbers based on Goroutines and channels
+
 ####lib/secs2minutes.lua
 
 Convert an integer representing the seconds in minutes or a full representation 
