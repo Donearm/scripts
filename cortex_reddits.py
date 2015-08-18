@@ -24,7 +24,7 @@ import subprocess
 # Declare here the (sub)reddits
 REDDITS_IMG = ['unixporn', 'wallpaperdump']
 REDDITS_PROGRAMMING = ['compsci', 'programming', 'golang', 'awesomewm', 'archlinux', 'linux']
-REDDITS_VAR = ['linguistics', 'history', 'music', 'metal', 'fitness']
+REDDITS_VAR = ['linguistics', 'history', 'music', 'metal', 'fitness', 'learnpolish']
 
 REDDITS_ALL = REDDITS_IMG + REDDITS_PROGRAMMING + REDDITS_VAR
 
