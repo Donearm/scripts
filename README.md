@@ -348,6 +348,12 @@ would want to but it's a funny trick
 
 Show IP addresses for a host
 
+####sopcast.go
+
+A launcher for Sopcast streaming links. I had a Bash function for this 
+but it was convoluted to kill the Sopcast process when exiting the video 
+player. Go handles this case much easily
+
 ####systemd/network.service
 
 Systemd service for wired networks
