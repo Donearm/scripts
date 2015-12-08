@@ -98,6 +98,10 @@ Compare tables for equality, after having "setified" them, in Lua
 
 The dirname shell command implemented in Lua
 
+####lib/dns\_lookup.js
+
+DNS lookup in NodeJS
+
 ####lib/generate\_random\_ints.lua
 
 Random number generator
