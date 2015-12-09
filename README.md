@@ -132,6 +132,10 @@ A generator of prime numbers based on Goroutines and channels
 Convert an integer representing the seconds in minutes or a full representation 
 of a clock (HH:MM:SS)
 
+####lib/web\_server.go
+
+Dead simple web server in Golang
+
 ####magnet\_link\_to\_torrent.sh
 
 Output a magnet link to a torrent file to save it for future re-use
