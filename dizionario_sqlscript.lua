@@ -12,7 +12,19 @@ local ansicolors = require("ansicolors")
 local DICTIONARY
 local LANGUAGE
 local WORD
-local DICTIONARY = '/mnt/d/Lingue/dictionary.db'
+
+--Check if db file exists from a path
+--@db_file path to db file
+function db_exists(dbfile)
+	f = io.open(dbfile)
+	if f ~= nil then
+		io.close(f)
+		return dbfile
+	else
+		return nil
+	end
+end
+local DICTIONARY = db_exists('/mnt/d/Lingue/dictionary.db') or db_exists('/mnt/documents/d/Lingue/dictionary.db')
 
 ---Help message
 function help()
@@ -32,6 +44,7 @@ function escape_quotes(s)
 		return s
 	end
 end
+
 
 ---Add a word and its translation in a sqlite table
 --@param w The word to add
