@@ -5,7 +5,7 @@
 -- @copyright 2011-2014, Gianluca Fiore <forod.g@gmail.com>
 --
 
-package.path = "/mnt/d/Script/lib/?.lua;" .. package.path
+package.path = "/mnt/d/Script/lib/?.lua;" .. "/mnt/documents/d/Script/lib/?.lua;" .. package.path
 local os = require("os")
 local ansicolors = require("ansicolors")
 
