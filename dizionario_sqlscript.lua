@@ -2,7 +2,7 @@
 
 ---
 -- @author Gianluca Fiore
--- @copyright 2011-2014, Gianluca Fiore <forod.g@gmail.com>
+-- @copyright 2011-2015, Gianluca Fiore <forod.g@gmail.com>
 --
 
 package.path = "/mnt/d/Script/lib/?.lua;" .. "/mnt/documents/d/Script/lib/?.lua;" .. package.path
