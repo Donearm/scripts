@@ -31,6 +31,11 @@ func printError(err error) {
 }
 
 func main() {
+	// Check we have a sop:// url as first argument
+	if len(os.Args) != 2 {
+		fmt.Printf("usage: %s [sop://link]\n", os.Args[0])
+		os.Exit(1)
+	}
 	// Launch Sopcast
 	sopcastCmd := exec.Command(sopcast, os.Args[1], "3908", "8908", "> /dev/null")
 
