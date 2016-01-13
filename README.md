@@ -181,6 +181,10 @@ Take a desktop screenshot with just a few Python lines
 Randomly choose and open a manpage. I found this to be an extremely quick and 
 funny way to discover hidden features and commands of your system
 
+####rmtrash.py
+
+Removing some useless directories/files in ~
+
 ####script\_awesome\_debug.sh
 
 Debug AwesomeWM with Xephyr. It can easily adapted to any other WM
