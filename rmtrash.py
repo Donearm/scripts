@@ -31,7 +31,6 @@ def rmtrash():
         absf = os.path.expanduser(f)
         if os.path.exists(absf):
             found.append(absf)
-            print("    %s" % f)
 
     if len(found) == 0:
         print("No shitty files found :)")
