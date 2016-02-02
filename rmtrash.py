@@ -38,12 +38,14 @@ def rmtrash():
         return
     else:
         print("Found shittyfiles:")
+        files_size = []
         for f in found:
+            files_size.append(os.stat(f).st_size)
             if os.path.isfile(f):
                 os.remove(f)
             else:
                 shutil.rmtree(f)
-        print("All cleaned")
+        print("Cleaned files, freed %dKb of space" % (sum(files_size)/1000))
 
 if __name__ == '__main__':
     rmtrash()
