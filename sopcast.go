@@ -53,7 +53,7 @@ func main() {
 	// sleep a bit to allow Sopcast to start caching the stream to an amount
 	// that the player can reproduce without bailing out because cache is too
 	// small
-	time.Sleep(5 * time.Second)
+	time.Sleep(10 * time.Second)
 
 	// Launch the video player
 	playerCmd := exec.Command(player, "http://localhost:8908/tv.asf")
