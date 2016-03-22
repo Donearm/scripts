@@ -2,10 +2,10 @@
 
 # Use like: ./make_gif.sh video output.gif
 
-SS=00:03
-DURATION=3
+SS=00:17
+DURATION=14
 PALETTE="/tmp/palette.png"
-FILTERS="fps=15,scale=320:-1:flags=lanczos"
+FILTERS="fps=15,scale=300:-1:flags=lanczos"
 BAD_QUALITY_FILTERS="fps=15,scale=320:-1:sws_dither=ed" # Use this if 
 					# you want a smallest possible final gif, sacrificing the quality
 PALETTEOPTS="palettegen=stats_mode=diff"
