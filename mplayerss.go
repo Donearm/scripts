@@ -30,9 +30,9 @@ func getPidOf(command string) string {
 		if len(out) == 0 {
 			// if out is empty, the process isn't running. Return empty string
 			return ""
-		} else {
-			panic(err)
 		}
+
+		panic(err)
 	}
 
 	// Use a new []byte to contain the numerical only output of the ps command
@@ -63,14 +63,13 @@ func deactivateScreensaver() {
 			// not running, just exit
 			fmt.Println("Xscreensaver is not running")
 			return
-		} else {
-			// Kill it then
-			fmt.Println("Xscreensaver is running")
-			cmd := exec.Command(screensaverCmd, "-deactivate", ">&-", "2>&- &")
-			startErr := cmd.Start()
-			if startErr != nil {
-				panic(startErr)
-			}
+		}
+		// Kill it then
+		fmt.Println("Xscreensaver is running")
+		cmd := exec.Command(screensaverCmd, "-deactivate", ">&-", "2>&- &")
+		startErr := cmd.Start()
+		if startErr != nil {
+			panic(startErr)
 		}
 	} else {
 		return
