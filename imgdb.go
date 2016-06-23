@@ -38,7 +38,7 @@ var insensitiveArg bool // Case insensitive search flag
 var randomArg bool		// Random image flag
 var searchArg string	// Search string flag
 
-var usageMessage string = `
+var usageMessage = `
 imgdb.go [options] [imgpath]
 
 Description:
@@ -183,7 +183,7 @@ func updateDb(db *sql.DB, pathmaps []string) {
 
 	for _, v := range pathmaps {
 		found := false
-		for k, _ := range currentRows {
+		for k  := range currentRows {
 			if v == k {
 				found = true
 				break
@@ -195,7 +195,7 @@ func updateDb(db *sql.DB, pathmaps []string) {
 		}
 	}
 
-	for k, _ := range currentRows {
+	for k := range currentRows {
 		toDelete := true
 		for _, v := range pathmaps {
 			if k == v {
