@@ -17,7 +17,7 @@ case $1 in
 	    ;;
 	*) if [ -b /dev/mapper/$MAPPER ]; then
 		sudo $CRYPTS luksClose $MAPPER;
-		sudo systemctl stop mpd.service && pkill go-notify-me;
+		sudo systemctl stop mpd.service && systemctl --user stop mpdscribble.service && pkill go-notify-me;
 	    else
 			if [ ! -d $DIR ]; then
 				sudo mkdir -p $DIR
@@ -35,6 +35,7 @@ case $1 in
 					if [ $? -eq 0 ]; then
 						# start the mpd demon
 						sudo systemctl start mpd.service
+						systemctl --user start mpdscribble.service
 						$GONOTIFY &>> ~/.xsession-errors &
 						notify-send "Private partition mounted and ready!"
 					else
@@ -45,6 +46,7 @@ case $1 in
 					sudo mount /dev/mapper/$MAPPER $DIR
 					if [ $? -eq 0 ]; then
 						sudo systemctl start mpd.service
+						systemctl --user start mpdscribble.service
 						$GONOTIFY &>> ~/.xsession-errors &
 						notify-send "Private partition mounted and ready!"
 					else
