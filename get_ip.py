@@ -22,12 +22,16 @@ import sys
 import urllib.request
 import json
 
-JSONIP = 'http://jsonip.com/'
+JSONIP4 = 'https://ipv4.jsonip.com/'
+JSONIP6 = 'https://ipv6.jsonip.com/'
 
 def main():
-    f = urllib.request.urlopen(JSONIP)
-    ip = json.loads(f.read().decode('utf-8'))
-    print("Your current IP is: %s" % ip['ip'])
+    f4 = urllib.request.urlopen(JSONIP4)
+    f6 = urllib.request.urlopen(JSONIP6)
+    ip4 = json.loads(f4.read().decode('utf-8'))
+    ip6 = json.loads(f6.read().decode('utf-8'))
+    print("Your current IPv4 is: %s" % ip4['ip'])
+    print("Your current IPv6 is: %s" % ip6['ip'])
 
 if __name__ == '__main__':
     status = main()

@@ -65,7 +65,7 @@ files if present. Same script written in Lua and Python
 
 #### get\_ip.py
 
-Print the current IP
+Print the current IP. Both IPv4 and IPv6 are shown
 
 #### hdbenchmark.sh
 
