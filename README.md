@@ -1,218 +1,218 @@
-##Scripts
+## Scripts
 
 a collection of personal scripts. A few worked way back in time, some need a complete rewrite but 90% are perfectly usable.
 
-####bigpkg.py
+####  bigpkg.py
 
 List Archlinux's installed packages by size. By Allan McRae
 
-####cert-hashing.sh
+#### cert-hashing.sh
 
 Hash a SSL certificate
 
-####clitwitter.py
+#### clitwitter.py
 
 Old script to post on Twitter with Basic Authentication. Need to be updated with 
 OAuth but I've since switched to TTYtter
 
-####cortex\_reddits.py
+#### cortex\_reddits.py
 
 Browse (sub)reddits with the Reddit client cortex. Totally an hack, subscribing 
 them on Reddit is much easier but I didn't want to read all my subscriptions 
 each time so I wrote this script to choose what and when to browse
 
-####dayoftheweek.py
+#### dayoftheweek.py
 
 Not my script originally, I just made it Python 3.2 compatible
 
-####delete\_by\_percentage.lua
+#### delete\_by\_percentage.lua
 
 Delete a random choice of files in a directory by a given percentage. Seems 
 totally pointless but you'll never imagine the use case that made me write it... 
 :)
 
-####deploy.sh
+#### deploy.sh
 
 Deploy script for dotfiles here on Github. Untested.
 
-####dizionario\_sqlscript.lua
+#### dizionario\_sqlscript.lua
 
 Search and insert words and definitions in a SQLite dictionary of multiple 
 languages
 
-####dwm\_start.sh
+#### dwm\_start.sh
 
 Boot script for DWM
 
-####dzenstatusbar.sh
+#### dzenstatusbar.sh
 
 A simple dzen statusbar
 
-####dzenweather.sh
+#### dzenweather.sh
 
 Weather script with icons for Dzen
 
-####feh\_or\_browser.lua
+#### feh\_or\_browser.lua
 
 Useful for Newsbeuter or other similar cli softwares that can't show images in 
 terminals. It checks whether a url is to an image, and open it in feh, or to 
 something else, and open it in the browser
 
-####fehgallery.lua and fehgallery.py
+#### fehgallery.lua and fehgallery.py
 
 Sort images in a directory and feed them to feh. Also, delete feh's filelist 
 files if present. Same script written in Lua and Python
 
-####get\_ip.py
+#### get\_ip.py
 
 Print the current IP
 
-####hdbenchmark.sh
+#### hdbenchmark.sh
 
 A very raw HD benchmark tool
 
-####imap\_check.py
+#### imap\_check.py
 
 CLI unread count of my 2 GMail accounts. I used this as input for an AwesomeWM 
 widget before the gmail one from vicious was implemented. Nowadays it's 
 superfluous (and in need of refactoring...)
 
-####imgtags.py
+#### imgtags.py
 
 Remove exiv tags from all the images in the current directory. People add all 
 sorts of absurd tags to their images...
 
-####lib/basename.lua
+#### lib/basename.lua
 
 The basename shell command implemented in Lua
 
-####lib/benchmark\_clock.lua
+#### lib/benchmark\_clock.lua
 
 A quite raw benchmark for Lua scripts
 
-####lib/compare\_table.lua
+#### lib/compare\_table.lua
 
 Compare tables for equality, after having "setified" them, in Lua
 
-####lib/dirname.lua
+#### lib/dirname.lua
 
 The dirname shell command implemented in Lua
 
-####lib/dns\_lookup.js
+#### lib/dns\_lookup.js
 
 DNS lookup in NodeJS
 
-####lib/generate\_random\_ints.lua
+#### lib/generate\_random\_ints.lua
 
 Random number generator
 
-####lib/iterate\_nested\_tables.lua
+#### lib/iterate\_nested\_tables.lua
 
 Iterate over nested tables in Lua
 
-####lib/list\_files.lua
+#### lib/list\_files.lua
 
 List files with just `ls` instead of using `lua-filesystem` (which has more 
 features of course)
 
-####lib/markdown-print.css and lib/markdown.css
+#### lib/markdown-print.css and lib/markdown.css
 
 Css for markdown files converted to html, printed or shown on screen
 
-####lib/parse\_cli\_arguments.lua
+#### lib/parse\_cli\_arguments.lua
 
 A skeleton of a function parsing cli arguments in Lua
 
-####lib/prime\_numbers.go
+#### lib/prime\_numbers.go
 
 A generator of prime numbers based on Goroutines and channels
 
-####lib/secs2minutes.lua
+#### lib/secs2minutes.lua
 
 Convert an integer representing the seconds in minutes or a full representation 
 of a clock (HH:MM:SS)
 
-####lib/web\_server.go
+#### lib/web\_server.go
 
 Dead simple web server in Golang
 
-####magnet\_link\_to\_torrent.sh
+#### magnet\_link\_to\_torrent.sh
 
 Output a magnet link to a torrent file to save it for future re-use
 
-####make\_gif.sh
+#### make\_gif.sh
 
 Make a gif from a video using FFmpeg. Quick and Dirty (size, duration are hardencoded).
 
-####markdownitall.lua
+#### markdownitall.lua
 
 Convert all markdown files in a path to html
 
-####mplayerss.lua
+#### mplayerss.lua
 
 Launch MPlayer while disabling screensaver, DPMS settings and any compositing 
 manager. When MPlayer exits, it reapplies the previous settings
 
-####naut-bulkrename.sh, naut-feh\_slide.sh and naut-urxvt.sh
+#### naut-bulkrename.sh, naut-feh\_slide.sh and naut-urxvt.sh
 
 Launch scripts for Nautilus. Not actually using them since years
 
-####net\_data\_sum.py
+#### net\_data\_sum.py
 
 Save network upload and download statistics in a file. Sum the numbers if from 
 the same day (to take into account reboots)
 
-####newsbeuter\_extract\_titleurl.sh
+#### newsbeuter\_extract\_titleurl.sh
 
 Output url and title from an article in newsbeuter in a file. I used, and 
 occasionally use still, this to tweet the interesting news from the rss feeds I 
 follow
 
-####plowdown\_parallel.sh
+#### plowdown\_parallel.sh
 
 Use plowdown to download in parallel when downloading from different sites
 
-####pyscreenshoter.py
+#### pyscreenshoter.py
 
 Take a desktop screenshot with just a few Python lines
 
-####randomman.lua
+#### randomman.lua
 
 Randomly choose and open a manpage. I found this to be an extremely quick and 
 funny way to discover hidden features and commands of your system
 
-####rmtrash.py
+#### rmtrash.py
 
 Removing some useless directories/files in ~
 
-####script\_awesome\_debug.sh
+#### script\_awesome\_debug.sh
 
 Debug AwesomeWM with Xephyr. It can easily adapted to any other WM
 
-####script\_bandwidth\_archive.sh
+#### script\_bandwidth\_archive.sh
 
 Save bandwidth stats to a text file, ready to be loaded in Tiddlywiki
 
-####script\_bbcode\_formatting.sh
+#### script\_bbcode\_formatting.sh
 
 Format files containing BBCode. More informations in the script itself
 
-####script\_bigger\_than\_M.sh
+#### script\_bigger\_than\_M.sh
 
 Print files and directories that are bigger than 1Mb. I use this to discover 
 what is eating up all the disk space in a partition
 
-####script\_blog\_backup.sh
+#### script\_blog\_backup.sh
 
 A pretty basic, and not that useful, blog/site backup script
 
-####script\_clean\_vim\_undodir.sh and script\_clean\_vim\_views.sh
+#### script\_clean\_vim\_undodir.sh and script\_clean\_vim\_views.sh
 
 2 scripts to clean undodir and views directories under `~/.vim/` to delete 
 references to files that are not present anymore on disk and thus save space. 
 Probably not useful today with >1TB disks but I hate wasting space
 
-####script\_disable\_touchpad.sh
+#### script\_disable\_touchpad.sh
 
 Launched at boot from your WM/DE, it detects thanks to xinput whether a 
 mouse is present or not and disable/enable the touchpad accordingly. It 
@@ -220,121 +220,121 @@ goes along with the udev rules, completing it as with udev it can only
 be detected when a mouse is plugged in or off, not when it's already 
 plugged in at boot. "Lachesis" is my mouse, of course
 
-####script\_dl\_single\_github\_file.sh
+#### script\_dl\_single\_github\_file.sh
 
 Download a single file from a specific repository on Github
 
-####script\_dos\_unix.sh
+#### script\_dos\_unix.sh
 
 Convert Dos/Unix newline format
 
-####script\_efi\_menu\_restore.sh
+#### script\_efi\_menu\_restore.sh
 
 Restore UEFI boot menu entries. Of course only those I use/care about
 
-####script\_entropy.sh
+#### script\_entropy.sh
 
 An entropy-generating script. I use this when I need to overwrite a partition or 
 disk with random data for security reasons. As I'm paranoid, `/dev/urandom` 
 isn't enough
 
-####script\_exif\_clean.sh
+#### script\_exif\_clean.sh
 
 A wrapper for imgtags.py
 
-####script\_extract\_ip.sh
+#### script\_extract\_ip.sh
 
 Extract all URLs from a file
 
-####script\_flash\_video\_save.sh
+#### script\_flash\_video\_save.sh
 
 Save the flash video opened in firefox. Not working with all files/sites
 
-####script\_flush\_thumbnails.sh
+#### script\_flush\_thumbnails.sh
 
 Remove all those `.thumbnails/` directories under a path. I hate keeping 5 years 
 old thumbnails of files that have been removed ages ago...
 
-####script\_ip4toip6.sh
+#### script\_ip4toip6.sh
 
 Convert an IPv4 address to its IPv6 equivalent
 
-####script\_loop\_ff\_profile.sh
+#### script\_loop\_ff\_profile.sh
 
 Move Firefox profiles in a file mounted in memory
 
-####script\_make\_thumbs.sh
+#### script\_make\_thumbs.sh
 
 Create thumbnails for images in a directory
 
-####script\_merge\_html.sh
+#### script\_merge\_html.sh
 
 Merge all html files in a directory in a single page
 
-####script\_music\_to\_android.sh
+#### script\_music\_to\_android.sh
 
 Transfer a directory containing music to the sdcard `Music/` directory on 
 Android phones. Not using this anymore, mounting the phone via usb is quicker
 
-####script\_mutt\_mailto.sh
+#### script\_mutt\_mailto.sh
 
 Open mailto links in mutt
 
-####script\_pdf\_to\_jpeg.sh
+#### script\_pdf\_to\_jpeg.sh
 
 Extract every page of a pdf as jpg images
 
-####script\_pianobar\_update\_proxy.sh
+#### script\_pianobar\_update\_proxy.sh
 
 Update the proxy address used by pianobar to access Pandora outside the US
 
-####script\_playlist\_make.sh
+#### script\_playlist\_make.sh
 
 Make a playlist out of music files in a directory and optionally convert flacs 
 to oggs
 
-####script\_print\_utf8.sh
+#### script\_print\_utf8.sh
 
 Output a serie of Unicode characters on the terminal. For the times when you 
 know there's a character in the Unicode table but don't know the code and can't 
 remember the name. Of course I've only added those I find more useful
 
-####script\_private.sh
+#### script\_private.sh
 
 Mount my private, cryptsetup encrypted partition and start the MPD daemon
 
-####script\_proxy\_checker.sh
+#### script\_proxy\_checker.sh
 
 Check whether a proxy is working and is from the US by trying to access 
 pandora.com (as it is blocked here in Italy, if I can access it it must be an US 
 address)
 
-####script\_rate\_music.sh
+#### script\_rate\_music.sh
 
 Add currently playing song in MPD to a playlist using ncmpcpp or cmus (quite 
 easily expanded for other players). The original script allowed only to rate 
 songs in aptly named playlists (1 to 5) but this permits to use any name for the 
 playlist
 
-####script\_ripencode.sh
+#### script\_ripencode.sh
 
 Audio cd ripping script (to mp3, ogg or flac)
 
-####script\_touchpad.sh
+#### script\_touchpad.sh
 
 Disable/enable the touchpad. When writing long texts on a laptop the fingers can 
 move the pointer and it's annoying. Disabling the touchpad removes the problem
 
-####script\_transmission\_notify.sh
+#### script\_transmission\_notify.sh
 
 A libnotify notification for completed torrents in Transmission
 
-####script\_ttytter\_now\_playing.sh
+#### script\_ttytter\_now\_playing.sh
 
 Tweets current playing song (from ncmpcpp) via TTYtter. This must be configured 
 already
 
-####script\_video\_thumbnails.sh
+#### script\_video\_thumbnails.sh
 
 This is a old script, but still working, that I used when I did some video 
 editing. Basically it generates an image containing informations such as 
@@ -343,42 +343,42 @@ show off its content. I never tweaked it more than "black backround, fixed
 spacing between thumbs" though, I just needed something that didn't force me to 
 depend on external programs.
 
-####script\_wd\_cryptousb.sh
+#### script\_wd\_cryptousb.sh
 
 Mount an encrypted partition on a usb hd that I use for backups.
 
-####script\_wifi\_control.sh
+#### script\_wifi\_control.sh
 
 Completely disable and power off the Atheros wifi card on the Asus 1005H netbook
 
-####script\_xwinwrap-video.sh
+#### script\_xwinwrap-video.sh
 
 Use a video as desktop background with xwinwrap. I have no idea why anybody 
 would want to but it's a funny trick
 
-####showip.c
+#### showip.c
 
 Show IP addresses for a host
 
-####sopcast.go
+#### sopcast.go
 
 A launcher for Sopcast streaming links. I had a Bash function for this 
 but it was convoluted to kill the Sopcast process when exiting the video 
 player. Go handles this case much more easily
 
-####systemd/network.service
+#### systemd/network.service
 
 Systemd service for wired networks
 
-####systemd/ttytter-screen.service and systemd/ttytter-tmux.service
+#### systemd/ttytter-screen.service and systemd/ttytter-tmux.service
 
 Launch TTYtter under screen or tmux as a self-respawning daemon with Systemd
 
-####tmux\_workon\_project.sh
+#### tmux\_workon\_project.sh
 
 Open 2 split windows in tmux, changing paths to the project's to work on
 
-####ttytter\_startup.sh
+#### ttytter\_startup.sh
 
 Old shell TTYtter startup script that I used before switching to Systemd. It 
 checks whether a tmux session containing TTYtter is already running and 
