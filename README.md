@@ -301,7 +301,7 @@ remember the name. Of course I've only added those I find more useful
 
 #### script\_private.sh
 
-Mount my private, cryptsetup encrypted partition and start the MPD daemon
+Mount my private, cryptsetup encrypted partition and start the MPD daemon. Automatic detection of different partition, on desktop or laptop
 
 #### script\_proxy\_checker.sh
 
