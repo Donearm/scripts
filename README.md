@@ -119,6 +119,10 @@ features of course)
 
 Css for markdown files converted to html, printed or shown on screen
 
+#### lib/must_run.go
+
+Quick wrapper for error checking for functions that must run (panic if don't)
+
 #### lib/parse\_cli\_arguments.lua
 
 A skeleton of a function parsing cli arguments in Lua
