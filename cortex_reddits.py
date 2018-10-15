@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 ###############################################################################
-# Copyright (c) 2015, Gianluca Fiore
+# Copyright (c) 2015-2018, Gianluca Fiore
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -22,9 +22,9 @@ import sys
 import subprocess
 
 # Declare here the (sub)reddits
-REDDITS_IMG = ['unixporn', 'wallpaperdump']
-REDDITS_PROGRAMMING = ['compsci', 'programming', 'golang', 'awesomewm', 'archlinux', 'linux']
-REDDITS_VAR = ['linguistics', 'history', 'music', 'metal', 'fitness', 'learnpolish']
+REDDITS_IMG = ['unixporn', 'wallpaperdump', 'EarthPorn']
+REDDITS_PROGRAMMING = ['compsci', 'programming', 'golang', 'awesomewm', 'archlinux', 'linux', 'SEO']
+REDDITS_VAR = ['linguistics', 'history', 'music', 'metal', 'fitness', 'learnpolish', 'baking', 'bakker', 'bladerunner', 'Blogging', 'books', 'Coffee', 'europe', 'Instagram', 'italy', 'Malazan', 'MilitaryHistory', 'mkxmobile', 'nespresso', 'NickCave', 'Pizza']
 
 REDDITS_ALL = REDDITS_IMG + REDDITS_PROGRAMMING + REDDITS_VAR
 
