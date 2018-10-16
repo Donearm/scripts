@@ -5,6 +5,8 @@
 -- @copyright 2011-2015, Gianluca Fiore <forod.g@gmail.com>
 --
 
+-- Multi-language script to look up a dictionary in the form of a Sqlite 
+-- file
 package.path = "/mnt/d/Script/lib/?.lua;" .. "/mnt/documents/d/Script/lib/?.lua;" .. package.path
 local os = require("os")
 local ansicolors = require("ansicolors")
