@@ -30,7 +30,7 @@ local DICTIONARY = db_exists('/mnt/d/Lingue/dictionary.db') or db_exists('/mnt/d
 
 ---Help message
 function help()
-	print([[Use: -e for English, -d for Deutsch, -c for Czech, -o for Polish, -s for Spanish or -p for Portuguese]])
+	print([[Use: -e for English, -d for Deutsch, -o for Polish, -s for Spanish or -p for Portuguese]])
 	print([[	append -a to insert a new word or -au to insert a new untraceable word 
 	or -r to replace an existing word]])
 	print("\n\tExample: -e -a to add a word to the English dictionary\n")
@@ -104,8 +104,7 @@ function main()
 		help()
 	else
 		print("Small Dictionary " .. ansicolors.blue .. "English" .. ansicolors.reset .. "/" 
-		.. ansicolors.yellow .. "Deutsch" .. ansicolors.reset .. "/" .. ansicolors.cyan .. 
-		"Czech" .. ansicolors.reset .. "/" .. ansicolors.magenta .. "Polish" .. 
+		.. ansicolors.yellow .. "Deutsch" .. ansicolors.reset .. "/" .. ansicolors.magenta .. "Polish" .. 
 		ansicolors.reset .. "/" .. ansicolors.red .. "Spanish" .. ansicolors.reset 
 		.. "/" .. ansicolors.green .. "Portuguese" .. ansicolors.reset .. "-Italian")
 
@@ -117,10 +116,6 @@ function main()
 		elseif arg[1] == "-d" then
 			LANGUAGE = "Deutsch"
 			print(ansicolors.yellow .. '(Deutsch-Italian)' .. ansicolors.reset)
-			print("\n")
-		elseif arg[1] == "-c" then
-			LANGUAGE = "Czech"
-			print(ansicolors.cyan .. '(Czech-Italian)' .. ansicolors.reset)
 			print("\n")
 		elseif arg[1] == "-o" then
 			LANGUAGE = "Polish"
