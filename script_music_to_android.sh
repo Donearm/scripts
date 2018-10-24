@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Copy the given music directory to the android device (usually in 
+# Copy the given music directory to the android device (usually in
 # /mnt/sdcard/Music/)
-# Requires Android Sdk (adb) and the transferring of files via wifi 
+# Requires Android Sdk (adb) and the transferring of files via wifi
 # enabled
 
 ANDROIDIP='192.168.1.5'

@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-# Make an image of a collection of thumbnails taken from a video, adding 
-# informations like file name, resolution, lenght and codec of it. 
-# It's possible to customize the number of thumbnails to go into the 
+# Make an image of a collection of thumbnails taken from a video, adding
+# informations like file name, resolution, lenght and codec of it.
+# It's possible to customize the number of thumbnails to go into the
 # final image (default 16, a multiple of 4 looks best)
 #
 # copyright 2015, Gianluca Fiore <forod.g@gmail.com>
@@ -16,12 +16,12 @@ FONT='/usr/share/fonts/TTF/DejaVuSans-Bold.ttf'
 
 if [ "$1" == '-h' ]; then
 	# printing usage informations
-	echo "Usage: 
+	echo "Usage:
 
 	script_video_thumbnails.sh some_video number_of_thumbs
 
 	some_video = video from which we want to create the thumbnails
-	number_of_thumbs = as it says, default is 16 
+	number_of_thumbs = as it says, default is 16
 
 	Use \"-h\" to print this help"
 	echo ""
@@ -43,11 +43,11 @@ fi
 
 # Ask where to output the thumbnails
 read -e -p "Where do you want your thumbnails? " THUMBDIR
-THUMBDIR="${THUMBDIR:=$HOME/thumbs}" # defaults to ~/thumbs if THUMBDIR 
+THUMBDIR="${THUMBDIR:=$HOME/thumbs}" # defaults to ~/thumbs if THUMBDIR
 									# is empty
 # we need the filename without extensions for a correct name of the
-# final thumbnail 
-VID_EXTENSION=`echo $(basename "$VIDEO") | sed 's/\.[a-zA-Z0-9]\{,3\}$//g'` 
+# final thumbnail
+VID_EXTENSION=`echo $(basename "$VIDEO") | sed 's/\.[a-zA-Z0-9]\{,3\}$//g'`
 
 VID_LENGTH=`mplayer $MP_OPTIONS -ss 00:00 -frames 1 "$VIDEO" 2>/dev/null | \
 grep ID_LENGTH | awk -F= '{print $2}'`
@@ -66,7 +66,7 @@ INTERVAL=`echo ${VID_LENGTH}/$DIVIDER | bc -l | awk -F. '{print $1}'`
 # i minuti
 L_MIN=`echo ${VID_LENGTH}/60 | bc -l | awk -F. '{print $1}'`
 # i secondi (formato mplayer)
-P_SEC=`echo ${VID_LENGTH}/60 | bc -l | awk -F. '{print $2}' | cut -c 1-5` 
+P_SEC=`echo ${VID_LENGTH}/60 | bc -l | awk -F. '{print $2}' | cut -c 1-5`
 # i secondi (formato :00)
 L_SEC=`echo ${P_SEC}*60/100 | bc -l | cut -c 1-2`
 
@@ -99,7 +99,7 @@ montage ./*.jpg -tile 4x -background black -geometry 300x300+2+2 \
 
 # These two command create a shadow instead
 THUMB_SIZE=`convert -identify "${VID_EXTENSION}".jpg "${VID_EXTENSION}".jpg | awk '{print $3}'`
-montage -shadow -geometry ${THUMB_SIZE}+10+10 "${VID_EXTENSION}".jpg "${VID_EXTENSION}".jpg 
+montage -shadow -geometry ${THUMB_SIZE}+10+10 "${VID_EXTENSION}".jpg "${VID_EXTENSION}".jpg
 
 echo ""
 echo "Everything done, you can find your thumbs in $HOME/thumbs/"

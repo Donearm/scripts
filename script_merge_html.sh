@@ -8,7 +8,7 @@ read -e -p "Enter filename of the merged, final html file: " final_page
 
 grep -iv "</body>" "${start_page}" | grep -iv "</html>" > "${final_page}"
 
-for i in ${html_path}/*.[hH][Tt][Mm]*; 
+for i in ${html_path}/*.[hH][Tt][Mm]*;
 do
 	grep -iv "<body>" "$i" | grep -iv "<html>" | grep -iv "</body>" | grep -iv "</html>" >> "${final_page}"
 done

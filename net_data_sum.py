@@ -41,7 +41,7 @@ for line in lines:
         newLines.append(whole_lines[-1])
     else:
         # save the two lines
-        line1 = whole_lines[-1] 
+        line1 = whole_lines[-1]
         line2 = whole_lines[-2]
         lastDate = date.match(line1) # get the last date
         penultimateDate = date.match(line2) # get the penultimate date
@@ -56,9 +56,9 @@ for line in lines:
             # finally make the final string to be written back to the file
             newLine = "%s: Up[%s kB] Down[%s kB]" % \
                     (lastDate.group(1), newUpTot, newDownTot)
-            
+
             # lastly, append the modified line to the final list and remove the
-            # two latest lines   
+            # two latest lines
             newLines.pop()
             newLines.append(newLine)
         else:

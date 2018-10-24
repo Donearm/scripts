@@ -8,9 +8,9 @@ cd $WATCHDIR || exit
 [[ "$1" =~ xt=urn:btih:([^&/]+) ]] || exit
 hashh=${BASH_REMATCH[1]}
 if [[ "$1" =~ dn=([^&/]+) ]];then
-  filename=${BASH_REMATCH[1]}
+	filename=${BASH_REMATCH[1]}
 else
-  filename=$hashh
+	filename=$hashh
 fi
 
 if [[ "$2" == 'vids' ]]; then

@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 # Output every page of a pdf in a jpeg image
 

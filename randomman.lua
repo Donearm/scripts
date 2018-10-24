@@ -7,7 +7,7 @@
 
 local PATH = '/usr/bin'
 
----Extract a random command in a path and open its manpage, 
+---Extract a random command in a path and open its manpage,
 ---recursively rerunning itself if there's none.
 --@param path the path to search in
 function find_a_page(path)

@@ -19,7 +19,7 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 #   Credits: Allan McRae for the initial script. markbabc and Karol for contributions
-#   
+#
 #   Patched to work with Pacman >= 4.2 by Gianluca Fiore
 #
 
@@ -104,7 +104,7 @@ for pkg in pkg_list:
                         break
                 for rdep in pkg_deps[dep]:
                     if not rdep in pkg_deptree[pkg]:
-                        pkg_deptree[pkg].append(rdep);				
+                        pkg_deptree[pkg].append(rdep);
 
 needed_by = {}
 for pkg in pkg_list:

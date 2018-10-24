@@ -2,15 +2,15 @@
 
 # Format every file containing bbcode under a path to be ready to be
 # posted on a forum or blog.
-# This means: 
-
+# This means:
+#
 # every image in a bbcode will have a single space between it and the
 # following (1)
 #
 # there won't be any space at the beginning of any line containing
 # bbcode (2)
 #
-# there will be a single empty line between the end of the code and the 
+# there will be a single empty line between the end of the code and the
 # link containing the source (the row starting with "fonte:" or
 # "credits:" (3)
 #

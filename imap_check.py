@@ -5,7 +5,7 @@ import imaplib
 import sys
 
 # Two gmail accounts, two routines of login/logout
-# Give passwords as arguments (I know, not optimal but better than storing it 
+# Give passwords as arguments (I know, not optimal but better than storing it
 # on disk)
 
 # The server

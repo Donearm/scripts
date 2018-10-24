@@ -10,7 +10,7 @@ local os = require("os")
 rImages = ".*%.[tjgpTJGP][pinPIN][eE]?[gfGF]" -- image files
 rFehList = "feh.*_filelist" -- feh filelists
 
--- concatenating all arguments from 1 onward to allow files with spaces 
+-- concatenating all arguments from 1 onward to allow files with spaces
 -- (still needs escaping when directly invoked by the shell)
 local firstfile = table.concat(select(1, arg))
 local collate = os.getenv("LC_COLLATE") -- LC_COLLATE locale, to sort tables
@@ -28,15 +28,15 @@ function dirname(str)
 end
 
 function splittable(t, pattern)
-	-- explanation: taking a table (t) and a pattern to match, iterate 
-	-- over t and when matching a pattern, and being sure that tableA is 
-	-- empty, add it as first value; then add all subsequent values 
+	-- explanation: taking a table (t) and a pattern to match, iterate
+	-- over t and when matching a pattern, and being sure that tableA is
+	-- empty, add it as first value; then add all subsequent values
 	-- after it, while keeping precedent ones in tableB.
-	-- After all this, append values in tableB into tableA so they 
-	-- will be at the end, with the value matching as first of the 
-	-- new table
-	-- WARNING: this comparation only works for filenames not containing 
-	-- unicode characters. If they do, sorting is screwed, see 
+	-- After all this, append values in tableB into tableA so they
+	-- will be at the end, with the value matching as first of the
+	-- new table.
+	-- WARNING: this comparation only works for filenames not containing
+	-- unicode characters. If they do, sorting is screwed, see
 	-- http://lua-users.org/wiki/LuaUnicode
 	local tableA = {}
 	local tableB = {}
@@ -65,7 +65,7 @@ local directory = lfs.currentdir()
 
 local filelist = {}
 for f in lfs.dir(directory) do
-	-- iterate the directory, if f doesn't start with a word or an 
+	-- iterate the directory, if f doesn't start with a word or an
 	-- underscore sign, skip it
 	if string.match(f, "^[_%-%w]") then
 		-- check attributes of every file and check if they are actually that
@@ -85,12 +85,12 @@ table.sort(filelist)
 local finaltable = splittable(filelist, basename(firstfile))
 
 for i,n in ipairs(finaltable) do
-	-- add the path, relative to directory of where the script was 
+	-- add the path, relative to directory of where the script was
 	-- started, to each filename in finaltable
 	local abspath_n = directory .. '/' .. n
 	-- escape any troublesome character for the shell
 	local escaped_n = string.gsub(abspath_n, "([%s\'\"\\%(%)%[%]%{%}&$%~%,%;%%])", "\\%1")
-	finaltable[i] = escaped_n 
+	finaltable[i] = escaped_n
 end
 
 -- join all images in a long string and launch feh

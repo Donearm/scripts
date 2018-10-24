@@ -35,7 +35,7 @@ function filename(str)
 	return name
 end
 
----Returns the html header by check if the parameter given is a string; 
+---Returns the html header by check if the parameter given is a string;
 --if not, return basename of file or the string in the <title> tag
 --@param v the value to be returned, if a string
 function generate_html_header(v)
@@ -45,7 +45,7 @@ function generate_html_header(v)
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<title>]]
-	local html2 = [[</title> 
+	local html2 = [[</title>
 	<link rel="stylesheet" type="text/css" href="file:///mnt/d/Script/lib/markdown.css" />
 	<link rel="stylesheet" type="text/css" media="print" href="file:///mnt/d/Script/lib/markdown-print.css" />
 </head>
@@ -71,7 +71,7 @@ function mkdtohtml(file)
 	html_file:close()
 end
 
----Check if a path exists and if it does, return a string telling 
+---Check if a path exists and if it does, return a string telling
 --whether it is a file or a directory
 --@param path the path to check
 function fileordir(path)
@@ -89,7 +89,7 @@ function fileordir(path)
 	end
 end
 
----Search inside a directory for all markdown files and adds them all to 
+---Search inside a directory for all markdown files and adds them all to
 --a table
 --@param dir the base directory into which to search
 --@param tbl the table that will contain all file paths

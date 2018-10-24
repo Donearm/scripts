@@ -15,7 +15,7 @@ elif [[ $1 == 'umount' ]]; then
 	sync
 	umount -l /media/cryptousb || exit 1
 	$CRYPTSETUP luksClose cryptousb || exit 1
-	rmdir /media/cryptousb 
+	rmdir /media/cryptousb
 else
 	echo "Something went wrong...."
 fi

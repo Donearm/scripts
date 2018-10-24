@@ -2,26 +2,26 @@
 
 
 if [ $# -ne 1 ]; then
-        echo Usage: $(basename $0) city
-        exit 1
+	echo Usage: $(basename $0) city
+	exit 1
 fi
 
 DZEN_OPTS="-p -l 6 -sa c -fn -*-*-*-*-*-*-14-*-*-*-*-*-iso8859-* \
--x 156 -y 1 -tw 26 -w 300 -bg #252525 \
--e onstart=collapse;entertitle=uncollapse;leavetitle=collapse"
-#-e onstart=collapse;button1=uncollapse;button4=uncollapse;button5=collapse;button3=exit" 
+	-x 156 -y 1 -tw 26 -w 300 -bg #252525 \
+	-e onstart=collapse;entertitle=uncollapse;leavetitle=collapse"
+	#-e onstart=collapse;button1=uncollapse;button4=uncollapse;button5=collapse;button3=exit"
 
-IFS=$'\n' # changing the ifs variable to make it accept the spaces in
-			# the array
-GWEATHER=( 'Sunny' 'Clear' 'Mostly Sunny' 'Partly Sunny' \
-'Chance of Rain' 'Mostly Cloudy' 'Cloudy' 'Foggy' 'Rain' \
-'Showers' 'Snow' )
-unset IFS
+	IFS=$'\n' # changing the ifs variable to make it accept the spaces in
+	# the array
+	GWEATHER=( 'Sunny' 'Clear' 'Mostly Sunny' 'Partly Sunny' \
+		'Chance of Rain' 'Mostly Cloudy' 'Cloudy' 'Foggy' 'Rain' \
+		'Showers' 'Snow' )
+			unset IFS
 
-ICONDIR="$HOME/.icons/weather/"
-CITY=$1
-FILE=`mktemp`
-links -dump "http://www.google.com/search?hl=en&q=${CITY}+weather" > $FILE
+			ICONDIR="$HOME/.icons/weather/"
+			CITY=$1
+			FILE=`mktemp`
+			links -dump "http://www.google.com/search?hl=en&q=${CITY}+weather" > $FILE
 
 # the "Weather for $CITY" string
 TITLE=`grep "^Weather" $FILE`

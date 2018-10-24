@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Restore the EFI boot menu after updating its version. Only the entries 
+# Restore the EFI boot menu after updating its version. Only the entries
 # that I care, of course
 
 EFIBOOTMGR=$(which efibootmgr)

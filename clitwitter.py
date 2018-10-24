@@ -48,7 +48,7 @@ def truncate(string, target):
         msgtoolong()
     else:
         # string is bigger than target but shorter than 280 characters. It's ok
-        lastchar = string[140] 
+        lastchar = string[140]
         if RWhitespaces.match(lastchar):
             # last character is a space, good, split the string there
             msg1 = string[:140]
@@ -141,7 +141,7 @@ def main():
         for msg in message1, message2:
             twitterpost(args.username, args.password, msg)
             return 0
-        
+
 
 if __name__ == '__main__':
     status = main()

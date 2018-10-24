@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Using the proxy_checker.sh script to automatically update the 
+# Using the proxy_checker.sh script to automatically update the
 # pianobar's config file with a working USA proxy
 
 CONFIG="${HOME}/.config/pianobar/config"

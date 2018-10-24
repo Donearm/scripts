@@ -4,7 +4,7 @@
 """
 Feed the image opened on the command-line or via a filemanager to feh and
 orders all the other images in the same directory alphabetically but always
-starting at the chosen one (the first argument to the script, basically). 
+starting at the chosen one (the first argument to the script, basically).
 """
 
 
@@ -95,7 +95,7 @@ indexfile = basename(firstfile)
 # second method: check if indexfile is present, and use the position of it as a
 # splitting point. This method is very slighlty faster albeit I prefer the
 # first one.
-if indexfile in sortedlistf: 
+if indexfile in sortedlistf:
     # save the count of elements in the list
     lengthList = len(sortedlistf)
     # save the index number, or current location, of the index file
@@ -123,7 +123,7 @@ for names in finallist:
     completefinallist.append(sub_filenames)
 
 # join the final list in a long, single string
-# 
+#
 # check first that the final list contains less than 800 files; if it's bigger
 # split it in two list to be fed to feh one after the other. We do this because
 # there is a OSError: "argument list too long" when dealing with more than 800

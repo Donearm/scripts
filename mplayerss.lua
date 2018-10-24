@@ -1,6 +1,6 @@
 #!/usr/bin/env lua
 
----Kill xscreensaver, cairo-compmgr and/or compton before running 
+---Kill xscreensaver, cairo-compmgr and/or compton before running
 --mplayer and reactivate them after mplayer exits
 -- @author Gianluca Fiore
 -- @copyright 2011-2014, Gianluca Fiore <forod.g@gmail.com>

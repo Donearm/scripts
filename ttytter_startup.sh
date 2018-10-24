@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Check if ttytter is already running inside tmux and if it's not launch 
+# Check if ttytter is already running inside tmux and if it's not launch
 # it
 
 run_tmux() {

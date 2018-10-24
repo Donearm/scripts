@@ -28,7 +28,7 @@ fcpuusage() {
 
 # Hd temp 1
 fhdtemp1() {
-	echo $(sudo hddtemp /dev/sda -n)°C 
+	echo $(sudo hddtemp /dev/sda -n)°C
 }
 
 # Hd temp 2
@@ -102,4 +102,4 @@ while true; do
 	#$GPUCOUNTER=$((GPUCOUNTER+1))
 
 	sleep $INTERVAL
-done | dzen2 -fn '-*-liberation sans-medium-r-*-*-12-*-*-*-*-*-*-*' -bg '#1b1213' -fg '#e9e8e3' -w 1680 -x 1050 -ta r 
+done | dzen2 -fn '-*-liberation sans-medium-r-*-*-12-*-*-*-*-*-*-*' -bg '#1b1213' -fg '#e9e8e3' -w 1680 -x 1050 -ta r

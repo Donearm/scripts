@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 # Entropy-producing script. Useful to increase /dev/random seed
 # Requires openssl and perl or hdparm installed

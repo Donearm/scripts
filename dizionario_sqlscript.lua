@@ -5,7 +5,7 @@
 -- @copyright 2011-2015, Gianluca Fiore <forod.g@gmail.com>
 --
 
--- Multi-language script to look up a dictionary in the form of a Sqlite 
+-- Multi-language script to look up a dictionary in the form of a Sqlite
 -- file
 package.path = "/mnt/d/Script/lib/?.lua;" .. "/mnt/documents/d/Script/lib/?.lua;" .. package.path
 local os = require("os")
@@ -31,7 +31,7 @@ local DICTIONARY = db_exists('/mnt/d/Lingue/dictionary.db') or db_exists('/mnt/d
 ---Help message
 function help()
 	print([[Use: -e for English, -d for Deutsch, -o for Polish, -s for Spanish or -p for Portuguese]])
-	print([[	append -a to insert a new word or -au to insert a new untraceable word 
+	print([[	append -a to insert a new word or -au to insert a new untraceable word
 	or -r to replace an existing word]])
 	print("\n\tExample: -e -a to add a word to the English dictionary\n")
 	os.exit()
@@ -103,9 +103,9 @@ function main()
 		-- no arguments
 		help()
 	else
-		print("Small Dictionary " .. ansicolors.blue .. "English" .. ansicolors.reset .. "/" 
-		.. ansicolors.yellow .. "Deutsch" .. ansicolors.reset .. "/" .. ansicolors.magenta .. "Polish" .. 
-		ansicolors.reset .. "/" .. ansicolors.red .. "Spanish" .. ansicolors.reset 
+		print("Small Dictionary " .. ansicolors.blue .. "English" .. ansicolors.reset .. "/"
+		.. ansicolors.yellow .. "Deutsch" .. ansicolors.reset .. "/" .. ansicolors.magenta .. "Polish" ..
+		ansicolors.reset .. "/" .. ansicolors.red .. "Spanish" .. ansicolors.reset
 		.. "/" .. ansicolors.green .. "Portuguese" .. ansicolors.reset .. "-Italian")
 
 		-- check if the first argument is correct
@@ -133,7 +133,7 @@ function main()
 			help()
 		end
 
-		-- check if there is a second argument. If affirmative, it'll be 
+		-- check if there is a second argument. If affirmative, it'll be
 		-- the word to look up in the dictionary
 		if not arg[2] then
 			repeat
@@ -195,7 +195,7 @@ function main()
 				delete_translation(w, LANGUAGE)
 				os.exit()
 			else
-				-- there could be more words. Concatenate them all using a 
+				-- there could be more words. Concatenate them all using a
 				-- single space as the separator character
 				WORD = table.concat(arg, ' ', 2, #arg)
 			end

@@ -1,8 +1,8 @@
 #!/bin/sh
 
-# Extract url and title from an article read in newsbeuter and save them 
+# Extract url and title from an article read in newsbeuter and save them
 # in a file (articles_to_share)
-# Use the "pipe-to" command from newsbeauter to feed the article to this 
+# Use the "pipe-to" command from newsbeauter to feed the article to this
 # script
 
 TMPFILE=$(mktemp)

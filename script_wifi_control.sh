@@ -6,7 +6,7 @@ INT='wlan0'
 MODULE='ath9k'
 
 case $1 in:
-	off) 
+	off)
 	sudo /etc/rc.d/wicd stop
 	sudo iwconfig $INT txpower off
 	sudo ifconfig $INT down

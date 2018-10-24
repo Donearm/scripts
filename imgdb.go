@@ -42,10 +42,10 @@ var usageMessage = `
 imgdb.go [options] [imgpath]
 
 Description:
-imgdb.go will create anew or update a pre-existing database of file paths in 
-a specific filesystem location. Every file will have a "used" column in 
-the database to tell whether it has already been used or not. 
-Implemented also are searching the database and printing a random image, 
+imgdb.go will create anew or update a pre-existing database of file paths in
+a specific filesystem location. Every file will have a "used" column in
+the database to tell whether it has already been used or not.
+Implemented also are searching the database and printing a random image,
 among the ones that haven't yet been used.
 
 Arguments:
@@ -60,7 +60,7 @@ Arguments:
 	-random|-r
 		Print a random image's path
 	-search|-s <string>
-		Search for a string, usually part of the path or the image name, 
+		Search for a string, usually part of the path or the image name,
 		in the database
 	-insensitive|-i
 		Search in case insensitive mode. It requires also -s (obviously)
@@ -130,8 +130,8 @@ func connectDb(dbpath string) *sql.DB {
 func createDb(db *sql.DB) *sql.DB {
 	// Create
 	sql := `
-	create table if not exists images (id integer not null primary key, 
-	path text unique, 
+	create table if not exists images (id integer not null primary key,
+	path text unique,
 	used integer default 0);
 	`
 	_, err := db.Exec(sql)
@@ -245,7 +245,7 @@ func searchRow(db *sql.DB, query string) map[string]int {
 
 // Change the used column in the db for the given paths
 func changeUsedState(db *sql.DB, path string) {
-	_, err := db.Exec(`update images set 
+	_, err := db.Exec(`update images set
 	used = case when used=0 then 1 else 0 end where path = ?`, path)
 	if err != nil {
 		log.Fatal(err)

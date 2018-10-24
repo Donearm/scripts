@@ -64,7 +64,7 @@ def delete_tags(metadata, key):
     except KeyError:
         print("There's not a %s tag in this image, exiting..." % key)
         return 1
-    
+
 
 def main ():
     """main loop"""
@@ -91,7 +91,7 @@ def main ():
                 print("%s has no tags, nothing to delete" % options.image)
                 return 0
         if not options.tags:
-            # without tags given perhaps the user wants just see the already 
+            # without tags given perhaps the user wants just see the already
             # presents tags (if any)
             try:
                 k = m['Iptc.Application2.Keywords']

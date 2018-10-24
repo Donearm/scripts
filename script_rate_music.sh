@@ -1,10 +1,10 @@
 #!/bin/bash -x
 ## Usage: rate-music [playlist|0-5]
-# 
+#
 # Adds current playing song to the mpd playlist corresponding to the
 # rating assigned. Any previous rating is removed. If 0 is given, the
 # songs rating will be removed.
-# 
+#
 # Based on https://bbs.archlinux.org/viewtopic.php?id=116113
 
 ## USER CONFIGURATION-----------------------------------------------------
@@ -20,8 +20,8 @@ pl_suffix='.m3u'
 
 ## Get current song from ncmpcpp or cmus or throw an error
 song=`ncmpcpp --now-playing '%D/%f' 2>/dev/null` || \
-    song=`cmus-remote -Q 2>/dev/null | grep file` || \
-    { echo "Error: you need either ncmpcpp or cmus installed to run this script. Aborting." >&2; exit 1; }
+	song=`cmus-remote -Q 2>/dev/null | grep file` || \
+	{ echo "Error: you need either ncmpcpp or cmus installed to run this script. Aborting." >&2; exit 1; }
 
 ## Error cases
 if [[ -z "$song" ]]; then
@@ -48,7 +48,7 @@ song=${song/file \///}
 ## Temporary file for grepping and sorting
 tmp="$playlists/tmp.m3u"
 
-## We are giving a rate, let's remove the song from previous rating 
+## We are giving a rate, let's remove the song from previous rating
 ## playlists. Only if it's between 0-5
 if [[ $1 =~ ^[0-5]+$ ]]; then
 	for n in {1..5}; do

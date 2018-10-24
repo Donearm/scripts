@@ -39,19 +39,19 @@ function unique_rand(n, min, max)
 	return res
 end
 
----"Setify" a table, using the items as string indices and their values 
+---"Setify" a table, using the items as string indices and their values
 --set all true
 --@param t the table to transform in a set
 function table.set(t)
 	local u = {}
 	for _,v in ipairs(t) do
-		u[v] = true 
+		u[v] = true
 	end
 	return u
 end
 
----Compare a table contents with a set (table with string index and true 
---values) and return a table containing only the elements not presents 
+---Compare a table contents with a set (table with string index and true
+--values) and return a table containing only the elements not presents
 --in the set
 --@param s the set
 --@param t a table
@@ -73,9 +73,9 @@ for f in lfs.dir(DIR) do
 	end
 end
 
--- simple version without requiring lfs. Stops working when filenames 
+-- simple version without requiring lfs. Stops working when filenames
 -- contain spaces
---for w in FILELIST[1]:gmatch("%S+") do 
+--for w in FILELIST[1]:gmatch("%S+") do
 --	table.insert(FILETABLE, w)
 --end
 
@@ -98,7 +98,7 @@ lfs.chdir(DIR)
 -- Make a set out of the table of files to keep
 local set_keeptable = table.set(KEEPTABLE)
 
--- and generate a new table comparing the complete and the keeptable 
+-- and generate a new table comparing the complete and the keeptable
 -- tables
 local to_delete_table = table.setcompare(set_keeptable, FILETABLE)
 

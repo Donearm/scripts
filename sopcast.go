@@ -60,7 +60,7 @@ func main() {
 	err = playerCmd.Start()
 	if err != nil {
 		printError(err)
-		// There has been an error with the video player, exit but kill Sopcast 
+		// There has been an error with the video player, exit but kill Sopcast
 		// first
 		err := sopcastCmd.Process.Signal(os.Kill)
 		if err != nil {

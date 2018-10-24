@@ -3,7 +3,7 @@
 # Launch parallel plowdown processes for different websites
 #
 set -e
- 
+
 debug() { echo "$@" >&2; }
 
 groupby() {
@@ -16,7 +16,7 @@ groupby() {
     local RETURN=$(echo $LINE | eval $RETURN_FUNC)
     if test "$FIRST" = "1"; then
       echo -n "$VALUE: $RETURN"
-      FIRST=0      
+      FIRST=0
     elif test "$LAST" = "$VALUE"; then
       echo -n " $RETURN"
     else
@@ -30,11 +30,11 @@ groupby() {
 
 cleanup() {
   ps awx > a.a
-  local PIDS=($(ps x -o  "%p %r" | awk "\$1 != $$ && \$2 == $$" | 
+  local PIDS=($(ps x -o  "%p %r" | awk "\$1 != $$ && \$2 == $$" |
     awk '{print $1}' | xargs))
   debug "cleanup: pids ${PIDS[*]}"
   for PID in ${PIDS[*]}; do
-    kill -0 $PID 2>/dev/null && kill -TERM $PID 
+    kill -0 $PID 2>/dev/null && kill -TERM $PID
   done
   sleep 2
   for PID in ${PIDS[*]}; do
@@ -63,4 +63,4 @@ while test ${#PIDS[*]} -ne 0; do
     kill -0 $PID 2>/dev/null || { wait $PID && unset PIDS[$PID]; }
   done
   sleep 1
-done 
+done
