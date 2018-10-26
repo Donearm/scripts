@@ -8,16 +8,43 @@ PWDTMP="/tmp/pwd.tmp"
 DIR='/media/private'
 GONOTIFY=$(which go-notify-me)
 
+function close_if_needed() {
+	if $(systemctl --user is-active --quiet mpd.service); then
+		# we run MPD and MPDScribble always together so it makes
+		# sense to stop them together too
+		systemctl --user stop mpd.service;
+		systemctl --user stop mpdscribble.service;
+	fi
+
+	# Check also if we need to kill go-notify-me
+	pidof go-notify-me >/dev/null && pkill go-notify-me;
+}
+
+function start_if_available() {
+	if $(systemctl --user start mpd.service --quiet); then
+		if $(systemctl --user start mpdscribble.service --quiet); then
+			# Both MPD and MPDScribble started successfully. Happy times
+			return 0
+		else
+			# MPDScribble didn't start
+			return 1
+		fi
+	else
+		# MPD didn't start
+		return 1
+	fi
+}
+
 case $1 in
-	umount) sudo systemctl --user stop mpd.service && pkill go-notify-me;
+	umount) close_if_needed
 		sudo umount -f $DIR
 		wait
 		sudo $CRYPTS luksClose $MAPPER
 		sudo rm -rf $DIR
 		;;
 	*) if [ -b /dev/mapper/$MAPPER ]; then
-		sudo $CRYPTS luksClose $MAPPER;
-		sudo systemctl --user stop mpd.service && systemctl --user stop mpdscribble.service && pkill go-notify-me;
+		sudo $CRYPTS luksClose $MAPPER
+		close_if_needed
 	else
 		if [ ! -d $DIR ]; then
 			sudo mkdir -p $DIR
@@ -33,11 +60,9 @@ case $1 in
 				sudo $CRYPTS luksOpen $partition $MAPPER
 				sudo mount /dev/mapper/$MAPPER $DIR
 				if [ $? -eq 0 ]; then
-					# start the mpd demon
-					systemctl --user start mpd.service
-					systemctl --user start mpdscribble.service
-					$GONOTIFY &>> ~/.xsession-errors &
-					notify-send "Private partition mounted and ready!"
+					if start_if_available; then
+						$GONOTIFY &>> ~/.xsession-errors &
+					fi
 				else
 					exit 1
 				fi
@@ -45,9 +70,9 @@ case $1 in
 				sudo $CRYPTS  luksOpen $partition $MAPPER
 				sudo mount /dev/mapper/$MAPPER $DIR
 				if [ $? -eq 0 ]; then
-					systemctl --user start mpd.service
-					systemctl --user start mpdscribble.service
-					$GONOTIFY &>> ~/.xsession-errors &
+					if start_if_available; then
+						$GONOTIFY &>> ~/.xsession-errors &
+					fi
 					notify-send "Private partition mounted and ready!"
 				else
 					exit 1
