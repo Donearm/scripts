@@ -20,9 +20,16 @@ shittyfiles = [
     '~/.bzr.log',
     '~/.nv/',
     '~/.viminfo',           # configured to be moved to ~/.cache/vim/viminfo, but it is still sometimes created...
-    '~/.npm/',              # npm cache
     '~/.cache/chromium/',   # chromium cache
 ]
+
+def clean_npm():
+    """Npm has a command, npm cache clean --force, to actually clean its cache. Running it instead of removing the directory manually"""
+
+    try:
+        os.system("npm cache clean --force &> /dev/null")
+    except:
+        print("An error occurred while trying to remove NPM cache")
 
 
 def rmtrash():
@@ -47,4 +54,5 @@ def rmtrash():
         print("Cleaned files, freed %dKb of space" % (sum(files_size)/1000))
 
 if __name__ == '__main__':
+    clean_npm()
     rmtrash()
