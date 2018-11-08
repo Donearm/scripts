@@ -378,6 +378,11 @@ Systemd service for wired networks
 
 Launch TTYtter under screen or tmux as a self-respawning daemon with Systemd
 
+#### tmux\_sites\_projects.sh
+
+Open a 3 windows tmux session, one for each of html, css and js files to 
+edit. Specifically made for website projects
+
 #### tmux\_workon\_project.sh
 
 Open 2 split windows in tmux, changing paths to the project's to work on
