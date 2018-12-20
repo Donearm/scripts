@@ -148,6 +148,10 @@ Output a magnet link to a torrent file to save it for future re-use
 
 Make a gif from a video using FFmpeg. Quick and Dirty (size, duration are hardencoded).
 
+#### maps\_client.go
+
+Script to query the Google Maps API for results matching a specific category of places around Krakow. This was a base for a full web app that never saw the light. An API key is needed
+
 #### markdownitall.lua
 
 Convert all markdown files in a path to html
