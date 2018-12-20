@@ -21,7 +21,7 @@ tmux new-session -d -s "$TARGET_NAME" -n "$TARGET_DIR" /bin/bash
 tmux send-keys "cd $TARGET_DIR" C-m
 
 # Split vertically
-tmux split-window -h -c "$TARGET_DIR"
+tmux split-window -h -c "#{pane_current_path}" 
 
 # Attach the new session
 tmux attach-session -t "$TARGET_NAME"
