@@ -106,6 +106,10 @@ DNS lookup in NodeJS
 
 Random number generator
 
+#### lib/get\_home\_dir.go
+
+Get current user's home directory
+
 #### lib/iterate\_nested\_tables.lua
 
 Iterate over nested tables in Lua
