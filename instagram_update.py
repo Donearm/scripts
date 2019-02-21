@@ -102,6 +102,9 @@ def main():
                 except instaloader.exceptions.QueryReturnedNotFoundException:
                     # Image not found. Could have been deleted by user, skip it
                     pass
+                except instaloader.exceptions.ConnectionException:
+                    # Resource not available, maybe anymore. Skip it
+                    pass
 
                 LASTCHECKFILE = profilename + "/lastcheck"
                 try:
@@ -129,6 +132,9 @@ def main():
                     print("Profile " + profilename + " was not found")
                 except instaloader.exceptions.QueryReturnedNotFoundException:
                     # Image not found. Could have been deleted by user, skip it
+                    pass
+                except instaloader.exceptions.ConnectionException:
+                    # Resource not available, maybe anymore. Skip it
                     pass
 
                 LASTCHECKFILE = profilename + "/lastcheck"
