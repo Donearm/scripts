@@ -123,6 +123,10 @@ features of course)
 
 Css for markdown files converted to html, printed or shown on screen
 
+#### lib/markdowntohtml.go
+
+Go parser of Markdown file to HTML
+
 #### lib/must_run.go
 
 Quick wrapper for error checking for functions that must run (panic if don't)
