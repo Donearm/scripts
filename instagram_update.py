@@ -20,7 +20,7 @@ __status__ = "beta"
 import sys
 from os import chdir
 from os.path import basename
-from datetime import datetime
+from datetime import datetime, timedelta
 from itertools import takewhile, dropwhile
 import argparse
 import instaloader
@@ -123,7 +123,7 @@ def main():
             content = ([x.strip() for x in content]) # remove whitespace characters
             for profilename in content:
                 lastcheckeddate = lastcheck_date(profilename + "/lastcheck")
-                SINCEDATE = datetime(lastcheckeddate[0], lastcheckeddate[1], lastcheckeddate[2])
+                SINCEDATE = datetime(lastcheckeddate[0], lastcheckeddate[1], lastcheckeddate[2]) + timedelta(days=1)
                 try:
                     posts = instaloader.Profile.from_username(L.context, profilename).get_posts()
                     for p in dropwhile(lambda p: p.date > TODAY, takewhile(lambda p: p.date > SINCEDATE, posts)):
