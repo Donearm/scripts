@@ -13,7 +13,7 @@
 __author__ = "Gianluca Fiore"
 __license__ = "GPL"
 __version__ = "0.1"
-__date__ = "20190211"
+__date__ = "20190307"
 __email__ = "forod.g@gmail.com"
 __status__ = "beta"
 
@@ -89,6 +89,7 @@ def main():
 
     if options.action == "run":
         FILE = 'IG_SL.md'
+        NOT_FOUND_FILE = 'IG_not_found.txt'
         with open(FILE) as f:
             content = f.readlines()
             content = ([x.strip() for x in content]) # remove whitespace characters
@@ -99,6 +100,9 @@ def main():
                         L.download_post(p, profilename)
                 except instaloader.exceptions.ProfileNotExistsException:
                     print("Profile " + profilename + " was not found")
+                    with open(NOT_FOUND_FILE, 'a') as n:
+                        n.write(profilename + "\n")
+                        n.close()
                 except instaloader.exceptions.QueryReturnedNotFoundException:
                     # Image not found. Could have been deleted by user, skip it
                     pass
@@ -118,6 +122,7 @@ def main():
         f.close()
     elif options.action == "update":
         FILE = 'IG_SL.md'
+        NOT_FOUND_FILE = 'IG_not_found.txt'
         with open(FILE) as f:
             content = f.readlines()
             content = ([x.strip() for x in content]) # remove whitespace characters
@@ -130,6 +135,9 @@ def main():
                         L.download_post(p, profilename)
                 except instaloader.exceptions.ProfileNotExistsException:
                     print("Profile " + profilename + " was not found")
+                    with open(NOT_FOUND_FILE, 'a') as n:
+                        n.write(profilename + "\n")
+                        n.close()
                 except instaloader.exceptions.QueryReturnedNotFoundException:
                     # Image not found. Could have been deleted by user, skip it
                     pass
