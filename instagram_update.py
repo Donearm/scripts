@@ -100,7 +100,7 @@ def main():
                         L.download_post(p, profilename)
                 except instaloader.exceptions.ProfileNotExistsException:
                     print("Profile " + profilename + " was not found")
-                    with open(NOT_FOUND_FILE, 'a') as n:
+                    with open(NOT_FOUND_FILE, 'w') as n:
                         n.write(profilename + "\n")
                         n.close()
                 except instaloader.exceptions.QueryReturnedNotFoundException:
@@ -135,7 +135,7 @@ def main():
                         L.download_post(p, profilename)
                 except instaloader.exceptions.ProfileNotExistsException:
                     print("Profile " + profilename + " was not found")
-                    with open(NOT_FOUND_FILE, 'a') as n:
+                    with open(NOT_FOUND_FILE, 'w') as n:
                         n.write(profilename + "\n")
                         n.close()
                 except instaloader.exceptions.QueryReturnedNotFoundException:
