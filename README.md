@@ -222,6 +222,11 @@ what is eating up all the disk space in a partition
 
 A pretty basic, and not that useful, blog/site backup script
 
+#### script\_clean\_gopath.sh
+
+Clean using `go clean` archive files and executable binaries created 
+with `go install` and `go get` in your `$GOPATH`
+
 #### script\_clean\_vim\_undodir.sh and script\_clean\_vim\_views.sh
 
 2 scripts to clean undodir and views directories under `~/.vim/` to delete 
