@@ -82,6 +82,11 @@ superfluous (and in need of refactoring...)
 Remove exiv tags from all the images in the current directory. People add all 
 sorts of absurd tags to their images...
 
+#### instahashtag.py
+
+A script to download the latest 30 posts matching an hashtags' list on 
+Instagram. Requires instaloader
+
 #### lib/basename.lua
 
 The basename shell command implemented in Lua
