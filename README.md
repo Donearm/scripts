@@ -189,6 +189,12 @@ Output url and title from an article in newsbeuter in a file. I used, and
 occasionally use still, this to tweet the interesting news from the rss feeds I 
 follow
 
+#### pick\_random\_file.sh
+
+Returns the name of a file, randomly picked in a given path among those 
+matching an extension (or any kind of file at all if no extension is 
+selected)
+
 #### plowdown\_parallel.sh
 
 Use plowdown to download in parallel when downloading from different sites
