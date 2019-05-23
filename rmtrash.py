@@ -6,21 +6,24 @@ import shutil
 
 
 shittyfiles = [
-    '~/.adobe',              # Flash crap
-    '~/.macromedia',         # Flash crap
+    '~/.adobe',                         # Flash crap
+    '~/.macromedia',                    # Flash crap
     '~/.recently-used',
     '~/.local/share/recently-used.xbel',
-    '~/Desktop',             # Firefox creates this
+    '~/Desktop',                        # Firefox creates this
     '~/.gstreamer-0.10',
     '~/.pulse',
     '~/.esd_auth',
     '~/.config/enchant',
     '~/.dropbox-dist',
-    '~/.bazaar/',           # bzr insists on creating files holding default values
+    '~/.bazaar/',                       # bzr insists on creating files holding default values
     '~/.bzr.log',
     '~/.nv/',
-    '~/.viminfo',           # configured to be moved to ~/.cache/vim/viminfo, but it is still sometimes created...
-    '~/.cache/chromium/',   # chromium cache
+    '~/.viminfo',                       # configured to be moved to ~/.cache/vim/viminfo, but it is still sometimes created...
+    '~/.cache/chromium/',               # Chromium cache
+    '~/.cache/BraveSoftware/',          # Brave browser cache
+    '~/.cache/ranger/',                 # ranger image/video previews' cache
+    '~/.ACEStream/.acestream_cache/'    # Acestream cache
 ]
 
 def clean_npm():
