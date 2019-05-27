@@ -49,6 +49,7 @@ def rmtrash():
         print("Found shittyfiles:")
         files_size = []
         for f in found:
+            print(f)
             files_size.append(os.stat(f).st_size)
             if os.path.isfile(f):
                 os.remove(f)
