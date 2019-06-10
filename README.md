@@ -421,3 +421,7 @@ Old shell TTYtter startup script that I used before switching to Systemd. It
 checks whether a tmux session containing TTYtter is already running and 
 reattaches to it or if it's not, launch one. This is for WM that are launched by 
 \startx as a DM implements already the same functionalities
+
+## Donate 
+
+[![ko-fi](https://www.ko-fi.com/img/donate_sm.png)](https://ko-fi.com/W7W7KA0Z)
