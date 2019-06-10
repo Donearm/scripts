@@ -35,6 +35,17 @@ def clean_npm():
         print("An error occurred while trying to remove NPM cache")
 
 
+def calculate_dir_size(directory):
+    """Walk through each directory and subdirectory of a path and calculate the total size of directories + files in it"""
+    size = 0
+    for dirpath, dirnames, filenames in os.walk(directory):
+        for f in filenames:
+            fp = os.path.join(dirpath, f)
+            if not os.path.islink(fp):
+                size += os.stat(fp).st_size
+    return size
+
+
 def rmtrash():
     found = []
     for f in shittyfiles:
@@ -50,7 +61,11 @@ def rmtrash():
         files_size = []
         for f in found:
             print(f)
-            files_size.append(os.stat(f).st_size)
+            if os.path.isdir(f):
+                files_size.append(calculate_dir_size(f))
+            else:
+                files_size.append(os.stat(f).st_size)
+
             if os.path.isfile(f):
                 os.remove(f)
             else:
