@@ -15,6 +15,16 @@ Hash a SSL certificate
 Old script to post on Twitter with Basic Authentication. Need to be updated with 
 OAuth but I've since switched to TTYtter
 
+#### compare\_images.py
+
+A script to compare images in a directory for similarity. It returns 
+only those similar but not identical in a list. At this moment the list 
+contains all images that have at least another very similar but doesn't 
+check if they are similar with all the other images in the list, ending 
+up with different couples of similar images but not all very similar. I 
+found it too long to loop again and again to check all the images among 
+themselves or return different lists for each group of similar images
+
 #### cortex\_reddits.py
 
 Browse (sub)reddits with the Reddit client cortex. Totally an hack, subscribing 
