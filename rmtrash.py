@@ -60,7 +60,7 @@ def rmtrash():
         print("Found shittyfiles:")
         files_size = []
         for f in found:
-            print(f)
+            print("Cleaning", f)
             if os.path.isdir(f):
                 files_size.append(calculate_dir_size(f))
             else:
