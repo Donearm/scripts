@@ -199,6 +199,11 @@ Output url and title from an article in newsbeuter in a file. I used, and
 occasionally use still, this to tweet the interesting news from the rss feeds I 
 follow
 
+#### nofollow-dofollow.js
+
+Quick script for the browser console to check whether links on a page 
+are nofollow or dofollow.
+
 #### pick\_random\_file.sh
 
 Returns the name of a file, randomly picked in a given path among those 
