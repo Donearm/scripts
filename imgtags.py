@@ -1,7 +1,7 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 ###############################################################################
-# Copyright (c) 2011-2014, Gianluca Fiore
+# Copyright (c) 2011-2019, Gianluca Fiore
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -10,20 +10,20 @@
 #
 ###############################################################################
 #
-# Requirements: Python 2.7 or later, Pyexiv2
+# Requirements: Python 3.7 or later, Py3exiv
 #
 
 __author__ = "Gianluca Fiore"
 __license__ = "GPL"
-__version__ = "0.1"
-__date__ = "20110530"
+__version__ = "0.2"
+__date__ = "20190912"
 __email__ = "forod.g@gmail.com"
 __status__ = "beta"
 
 import sys
 import argparse
 import os.path
-import pyexiv2
+import py3exiv
 
 
 def argument_parser():
@@ -62,7 +62,7 @@ def delete_tags(metadata, key):
     try:
         metadata.__delitem__(key)
     except KeyError:
-        print("There's not a %s tag in this image, exiting..." % key)
+        print(("There's not a %s tag in this image, exiting..." % key))
         return 1
 
 
@@ -88,17 +88,17 @@ def main ():
                 return 0
             except KeyError:
                 # there are already no tags, skip...
-                print("%s has no tags, nothing to delete" % options.image)
+                print(("%s has no tags, nothing to delete" % options.image))
                 return 0
         if not options.tags:
             # without tags given perhaps the user wants just see the already
             # presents tags (if any)
             try:
                 k = m['Iptc.Application2.Keywords']
-                print("%s is already tagged with %s " % (options.image, k.value))
+                print(("%s is already tagged with %s " % (options.image, k.value)))
                 return 0
             except:
-                print("%s has no tags set" % options.image)
+                print(("%s has no tags set" % options.image))
                 return 0
         else:
             try:
@@ -111,7 +111,7 @@ def main ():
                     print("There are already these tags present:\n")
                     for t in k.value:
                         print(t)
-                    s = raw_input("\nDo you want to overwrite them with %s ? [y/n] " % options.tags)
+                    s = input("\nDo you want to overwrite them with %s ? [y/n] " % options.tags)
                     if s == 'y' or s == 'Y':
                         print("Writing tags")
                         write_tags(m, 'Iptc.Application2.Keywords', options.tags)
