@@ -26,3 +26,8 @@ func basename(path string) string {
 func bold(t string) string {
 	return "\033[1m" + t + "\033[0m"
 }
+
+// return the type of any object (as a string)
+func typeOf(v interface{}) string {
+	return fmt.Sprintf("%T", v)
+}
