@@ -7,7 +7,7 @@
 
 DIR="$1"
 
-for d in $(find $DIR -maxdepth 1 -type d); do
+for d in $(find $DIR -mindepth 1 -maxdepth 1 -type d); do
 	n=$(find "$d" -type f -print | wc -l)
 	if [ "$2" == "large" ]; then
 		# if we want to know if subdirectories have more than 1 file
