@@ -2,7 +2,7 @@
 
 ---
 -- @author Gianluca Fiore
--- @copyright 2011-2015, Gianluca Fiore <forod.g@gmail.com>
+-- @copyright 2011-2020, Gianluca Fiore <forod.g@gmail.com>
 --
 
 -- Multi-language script to look up a dictionary in the form of a Sqlite

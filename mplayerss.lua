@@ -3,7 +3,7 @@
 ---Kill xscreensaver, cairo-compmgr and/or compton before running
 --mplayer and reactivate them after mplayer exits
 -- @author Gianluca Fiore
--- @copyright 2011-2014, Gianluca Fiore <forod.g@gmail.com>
+-- @copyright 2011-2020, Gianluca Fiore <forod.g@gmail.com>
 --
 
 local mplayer_cmd = 'mpv' -- the MPlayer command

@@ -5,7 +5,7 @@
 # It's possible to customize the number of thumbnails to go into the
 # final image (default 16, a multiple of 4 looks best)
 #
-# copyright 2015, Gianluca Fiore <forod.g@gmail.com>
+# copyright 2015-2020, Gianluca Fiore <forod.g@gmail.com>
 #
 # Requirements: mplayer, bc, awk, grep, imagemagick, cut
 
