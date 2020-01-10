@@ -275,6 +275,10 @@ Download a single file from a specific repository on Github
 
 Convert Dos/Unix newline format
 
+#### script\_download\_images.sh
+
+Download all images on a webpage with Curl. Does not check the type of image nor check if it is already present (it will overwrite images with the same name) but for a quick job it's ok. Readapted from a script found months ago on the web
+
 #### script\_efi\_menu\_restore.sh
 
 Restore UEFI boot menu entries. Of course only those I use/care about
