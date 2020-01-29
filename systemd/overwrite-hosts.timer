@@ -1,0 +1,10 @@
+[Unit]
+Description=Keep hosts file updated
+
+[Timer]
+Unit=overwrite-hosts.service
+OnBootSec=5min
+OnUnitActiveSec=10min
+
+[Install]
+WantedBy=basic.target
