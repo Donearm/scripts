@@ -6,7 +6,7 @@ MAPPER='private'
 CRYPTS=$(which cryptsetup)
 PWDTMP="/tmp/pwd.tmp"
 DIR='/media/private'
-GONOTIFY=$(which go-notify-me)
+GONOTIFY=$(command -v go-notify-me)
 
 function close_if_needed() {
 	if $(systemctl --user is-active --quiet mpd.service); then
@@ -21,8 +21,8 @@ function close_if_needed() {
 }
 
 function start_if_available() {
-	if $(systemctl --user start mpd.service --quiet); then
-		if $(systemctl --user start mpdscribble.service --quiet); then
+	if $(systemctl --user start mpd.service --quiet >/dev/null 2>&1); then
+		if $(systemctl --user start mpdscribble.service --quiet >/dev/null 2>&1); then
 			# Both MPD and MPDScribble started successfully. Happy times
 			return 0
 		else
@@ -48,35 +48,36 @@ case $1 in
 	else
 		if [ ! -d $DIR ]; then
 			sudo mkdir -p $DIR
-		else
-			if [[ $HOSTNAME == "kortirion" ]]; then
-				partition='/dev/disk/by-uuid/9bfb2faa-b1bb-4a18-b500-e4a2e344267e'
-			else
-				partition='/dev/disk/by-uuid/2e319e6b-265c-448d-b2c4-e01691c8f88e'
-			fi
+		fi
 
-			if [[ $DISPLAY != '' ]];
-			then
-				sudo $CRYPTS luksOpen $partition $MAPPER
-				sudo mount /dev/mapper/$MAPPER $DIR
-				if [ $? -eq 0 ]; then
-					if start_if_available; then
-						$GONOTIFY &>> ~/.xsession-errors &
-					fi
-				else
-					exit 1
+		if [[ $HOSTNAME == "kortirion" ]]; then
+			partition='/dev/disk/by-uuid/9bfb2faa-b1bb-4a18-b500-e4a2e344267e'
+		else
+			partition='/dev/disk/by-uuid/2e319e6b-265c-448d-b2c4-e01691c8f88e'
+		fi
+
+		if [[ $DISPLAY != '' ]];
+		then
+			sudo $CRYPTS luksOpen $partition $MAPPER
+			sudo mount /dev/mapper/$MAPPER $DIR
+			if [ $? -eq 0 ]; then
+				if start_if_available; then
+					$GONOTIFY &>> ~/.xsession-errors &
 				fi
+				echo "Private partition mounted and ready!"
 			else
-				sudo $CRYPTS  luksOpen $partition $MAPPER
-				sudo mount /dev/mapper/$MAPPER $DIR
-				if [ $? -eq 0 ]; then
-					if start_if_available; then
-						$GONOTIFY &>> ~/.xsession-errors &
-					fi
-					notify-send "Private partition mounted and ready!"
-				else
-					exit 1
+				exit 1
+			fi
+		else
+			sudo $CRYPTS  luksOpen $partition $MAPPER
+			sudo mount /dev/mapper/$MAPPER $DIR
+			if [ $? -eq 0 ]; then
+				if start_if_available; then
+					$GONOTIFY &>> ~/.xsession-errors &
 				fi
+				notify-send "Private partition mounted and ready!"
+			else
+				exit 1
 			fi
 		fi
 	fi
