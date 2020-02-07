@@ -64,7 +64,7 @@ case $1 in
 				if start_if_available; then
 					$GONOTIFY &>> ~/.xsession-errors &
 				fi
-				echo "Private partition mounted and ready!"
+				echo "\nPrivate partition mounted and ready!"
 			else
 				exit 1
 			fi
