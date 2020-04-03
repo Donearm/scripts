@@ -1,0 +1,12 @@
+[Unit]
+Description=Physlock
+Before=sleep.target
+
+[Service]
+User=gianluca
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/physlock -p "Screen is locked. Say friend and enter"
+
+[Install]
+WantedBy=sleep.target
