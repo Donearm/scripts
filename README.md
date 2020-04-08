@@ -453,6 +453,11 @@ checks whether a tmux session containing TTYtter is already running and
 reattaches to it or if it's not, launch one. This is for WM that are launched by 
 \startx as a DM implements already the same functionalities
 
+#### watermarking.sh
+
+Quick script to add a watermark on an image. Used for copyrighting my 
+images at the moment
+
 ## Donate 
 
 [![ko-fi](https://www.ko-fi.com/img/donate_sm.png)](https://ko-fi.com/W7W7KA0Z)
