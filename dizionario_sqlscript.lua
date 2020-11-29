@@ -103,31 +103,30 @@ function main()
 		-- no arguments
 		help()
 	else
-		print("Small Dictionary " .. ansicolors.blue .. "English" .. ansicolors.reset .. "/"
-		.. ansicolors.yellow .. "Deutsch" .. ansicolors.reset .. "/" .. ansicolors.magenta .. "Polish" ..
-		ansicolors.reset .. "/" .. ansicolors.red .. "Spanish" .. ansicolors.reset
-		.. "/" .. ansicolors.green .. "Portuguese" .. ansicolors.reset .. "-Italian")
+		print("Small Dictionary " .. ansicolors("%{blue}English%{reset}") .. "/"
+		.. ansicolors("%{yellow}Deutsch%{reset}") .. "/" .. ansicolors("%{magenta}Polish%{reset}") ..
+		"/" .. ansicolors("%{red}Spanish%{reset}") .. "/" .. ansicolors("%{green}Portuguese%{reset}") .. "-Italian")
 
 		-- check if the first argument is correct
 		if arg[1] == "-e" then
 			LANGUAGE = "English"
-			print(ansicolors.blue .. '(English-Italian)' .. ansicolors.reset)
+			print(ansicolors('%{blue}(English-Italian)%{reset}'))
 			print("\n")
 		elseif arg[1] == "-d" then
 			LANGUAGE = "Deutsch"
-			print(ansicolors.yellow .. '(Deutsch-Italian)' .. ansicolors.reset)
+			print(ansicolors('%{yellow}(Deutsch-Italian)%{reset}'))
 			print("\n")
 		elseif arg[1] == "-o" then
 			LANGUAGE = "Polish"
-			print(ansicolors.magenta .. '(Polish-Italian)' .. ansicolors.reset)
+			print(ansicolors('%{magenta}(Polish-Italian)%{reset}'))
 			print("\n")
 		elseif arg[1] == "-s" then
 			LANGUAGE = "Spanish"
-			print(ansicolors.red .. '(Spanish-Italian)' .. ansicolors.reset)
+			print(ansicolors('%{red}(Spanish-Italian)%{reset}'))
 			print("\n")
 		elseif arg[1] == "-p" then
 			LANGUAGE = "Portuguese"
-			print(ansicolors.green .. '(Portuguese-Italian)' .. ansicolors.reset)
+			print(ansicolors('%{green}(Portuguese-Italian)%{reset}'))
 			print("\n")
 		else
 			help()
