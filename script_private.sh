@@ -14,6 +14,7 @@ function close_if_needed() {
 		# sense to stop them together too
 		systemctl --user stop mpd.service;
 		systemctl --user stop mpdscribble.service;
+		systemctl --user stop mpDris2.service;
 	fi
 
 	# Check also if we need to kill go-notify-me
@@ -23,8 +24,13 @@ function close_if_needed() {
 function start_if_available() {
 	if $(systemctl --user start mpd.service --quiet >/dev/null 2>&1); then
 		if $(systemctl --user start mpdscribble.service --quiet >/dev/null 2>&1); then
-			# Both MPD and MPDScribble started successfully. Happy times
-			return 0
+			if $(systemctl --user start mpDris2.service --quiet >/dev/null 2>&1); then
+				# Both MPD, MPDScribble and mpDris2 started successfully. Happy times
+				return 0
+			else
+				# mpDris2 didn't start
+				return 1
+			fi
 		else
 			# MPDScribble didn't start
 			return 1
