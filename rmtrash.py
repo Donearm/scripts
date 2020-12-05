@@ -30,20 +30,34 @@ shittyfiles = [
     '~/.thumbnails/normal/'             # I don't care about thumbs...
 ]
 
+NPMCACHEDIR="~/.npm/_cacache/"
+GOBUILDCACHEDIR="~/.cache/go-build/"
+
 def clean_go_build():
     """Go build caches can be removed with its own command. Running it instead of removing the directory manually"""
-    try:
-        os.system("go clean -cache &> /dev/null")
-    except:
-        print("An error occurred while trying to remove Go build cache")
+
+    go_build_cache_size = calculate_dir_size(GOBUILDCACHEDIR)
+    # If cache is empty already, skip cleaning
+    if go_build_cache_size > 0:
+        try:
+            os.system("go clean -cache &> /dev/null")
+        except:
+            print("An error occurred while trying to remove Go build cache")
+
+        print("Cleaned Go build cache, freed %dKb of space" % (sum(go_build_cache_size)/1000))
 
 def clean_npm():
     """Npm has a command, npm cache clean --force, to actually clean its cache. Running it instead of removing the directory manually"""
 
-    try:
-        os.system("npm cache clean --force &> /dev/null")
-    except:
-        print("An error occurred while trying to remove NPM cache")
+    npm_cache_size = calculate_dir_size(NPMCACHEDIR)
+    # If cache is empty already, skip cleaning
+    if npm_cache_size > 0:
+        try:
+            os.system("npm cache clean --force &> /dev/null")
+        except:
+            print("An error occurred while trying to remove NPM cache")
+
+        print("Cleaned npm cache, freed %dKb of space" % (sum(npm_cache_size)/1000))
 
 
 def calculate_dir_size(directory):
