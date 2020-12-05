@@ -30,6 +30,13 @@ shittyfiles = [
     '~/.thumbnails/normal/'             # I don't care about thumbs...
 ]
 
+def clean_go_build():
+    """Go build caches can be removed with its own command. Running it instead of removing the directory manually"""
+    try:
+        os.system("go clean -cache &> /dev/null")
+    except:
+        print("An error occurred while trying to remove Go build cache")
+
 def clean_npm():
     """Npm has a command, npm cache clean --force, to actually clean its cache. Running it instead of removing the directory manually"""
 
@@ -78,4 +85,5 @@ def rmtrash():
 
 if __name__ == '__main__':
     clean_npm()
+    clean_go_build()
     rmtrash()
