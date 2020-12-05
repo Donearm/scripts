@@ -23,6 +23,9 @@ shittyfiles = [
     '~/.cache/chromium/',               # Chromium cache
     '~/.cache/BraveSoftware/',          # Brave browser cache
     '~/.cache/ranger/',                 # ranger image/video previews' cache
+    '~/.cache/mesa/',
+    '~/.cache/mesa_shader_cache/',
+    '~/.cache/electron/',
     '~/.ACEStream/.acestream_cache/',   # Acestream cache
     '~/.thumbnails/normal/'             # I don't care about thumbs...
 ]
