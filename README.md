@@ -453,6 +453,11 @@ checks whether a tmux session containing TTYtter is already running and
 reattaches to it or if it's not, launch one. This is for WM that are launched by 
 \startx as a DM implements already the same functionalities
 
+#### validate\_yaml.py
+
+A wrapper around pyyaml to quickly validate a yaml file from the command 
+line
+
 #### watermarking.sh
 
 Quick script to add a watermark on an image. Used for copyrighting my 
