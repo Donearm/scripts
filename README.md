@@ -310,7 +310,7 @@ old thumbnails of files that have been removed ages ago...
 
 Convert an IPv4 address to its IPv6 equivalent
 
-### script\_list\_files\_number\_in\_subdirectories.sh
+#### script\_list\_files\_number\_in\_subdirectories.sh
 
 Print the number of files in each subdirectory of a given directory
 
