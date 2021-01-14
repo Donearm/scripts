@@ -26,30 +26,38 @@ shittyfiles = [
     '~/.cache/mesa/',
     '~/.cache/mesa_shader_cache/',
     '~/.cache/electron/',
+    '~/.nvm/.cache/',
     '~/.ACEStream/.acestream_cache/',   # Acestream cache
     '~/.thumbnails/normal/'             # I don't care about thumbs...
 ]
 
 NPMCACHEDIR="~/.npm/_cacache/"
 GOBUILDCACHEDIR="~/.cache/go-build/"
+GOMODCACHEDIR="~/.go/pkg/mod/"
 
 def clean_go_build():
     """Go build caches can be removed with its own command. Running it instead of removing the directory manually"""
 
     go_build_cache_size = calculate_dir_size(GOBUILDCACHEDIR)
+    go_mod_cache_size = calculate_dir_size(GOMODCACHEDIR)
     # If cache is empty already, skip cleaning
-    if go_build_cache_size > 0:
+    print("Cleaning Go build cache...")
+    print("Current cache size is %dMb" % (go_build_cache_size + go_mod_cache_size))
+    if go_build_cache_size > 0 or go_mod_cache_size > 0:
         try:
             os.system("go clean -cache &> /dev/null")
+            os.system("go clean -modcache &> /dev/null")
         except:
             print("An error occurred while trying to remove Go build cache")
 
-        print("Cleaned Go build cache, freed %dKb of space" % (sum(go_build_cache_size)/1000))
+        print("Cleaned Go build cache, freed %dKb of space" % int(go_build_cache_size + go_mod_cache_size / 1000))
 
 def clean_npm():
     """Npm has a command, npm cache clean --force, to actually clean its cache. Running it instead of removing the directory manually"""
 
     npm_cache_size = calculate_dir_size(NPMCACHEDIR)
+    print("Cleaning NPM cache...")
+    print("Current cache size is %dMb" % npm_cache_size)
     # If cache is empty already, skip cleaning
     if npm_cache_size > 0:
         try:
@@ -63,11 +71,13 @@ def clean_npm():
 def calculate_dir_size(directory):
     """Walk through each directory and subdirectory of a path and calculate the total size of directories + files in it"""
     size = 0
-    for dirpath, dirnames, filenames in os.walk(directory):
-        for f in filenames:
-            fp = os.path.join(dirpath, f)
-            if not os.path.islink(fp):
-                size += os.stat(fp).st_size
+    absolutepath = os.path.expanduser(directory)
+    if os.path.isdir(absolutepath):
+        for (dirpath, dirnames, filenames) in os.walk(absolutepath):
+            for f in filenames:
+                fp = os.path.join(dirpath, f)
+                if not os.path.islink(fp):
+                    size += os.stat(fp).st_size
     return size
 
 
