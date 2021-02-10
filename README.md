@@ -328,7 +328,7 @@ Merge all html files in a directory in a single page
 
 #### script\_music\_to\_android.sh
 
-Transfer a directory containing music to the sdcard `Music/` directory on 
+Transfer a directory containing music to the sdcard `Music/` directory on
 Android phones. Not using this anymore, mounting the phone via usb is quicker
 
 #### script\_mutt\_mailto.sh
@@ -405,6 +405,11 @@ Mount an encrypted partition on a usb hd that I use for backups.
 #### script\_wifi\_control.sh
 
 Completely disable and power off the Atheros wifi card on the Asus 1005H netbook
+
+#### script\_xdg\_setup.sh
+
+A super-raw and quick script to set up the main files associations with 
+xdg-open
 
 #### script\_xwinwrap-video.sh
 
