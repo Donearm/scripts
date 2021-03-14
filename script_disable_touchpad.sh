@@ -1,10 +1,9 @@
 #!/bin/sh
-list=`xinput --list | grep -i 'Lachesis'`
+#
+# credit: https://github.com/lahwaacz/Scripts/blob/master/toggle-touchpad.sh
 
-if [ ${#list} -eq 0 ]; then
-	exec  `synclient touchpadoff=0`
-	notify-send -t 1500 "Touchpad on" "Mouse not present"
-else
-	exec `synclient touchpadoff=1`
-	notify-send -t 1500 "Touchpad off" "Mouse present"
-fi
+device="$(xinput list | grep -P '(?<= )[\w\s:]*(?i)(touchpad|synaptics)(?-i).*?(?=\s*id)' -o | head -n1)"
+
+[[ "$(xinput list-props "$device" | grep -P ".*Device Enabled.*\K.(?=$)" -o)" == "1" ]] &&
+    xinput disable "$device" ||
+    xinput enable "$device"
