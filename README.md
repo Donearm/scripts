@@ -12,7 +12,7 @@ Hash a SSL certificate
 
 #### clitwitter.py
 
-Old script to post on Twitter with Basic Authentication. Need to be updated with 
+Old script to post on Twitter with Basic Authentication. Need to be updated with
 OAuth but I've since switched to TTYtter
 
 #### compare\_images.py
@@ -356,7 +356,8 @@ remember the name. Of course I've only added those I find more useful
 
 #### script\_private.sh
 
-Mount my private, cryptsetup encrypted partition and start the MPD daemon. Automatic detection of different partition, on desktop or laptop
+Mount my private, cryptsetup encrypted partition and start the MPD daemon. 
+Automatic detection of different partition, on desktop or laptop
 
 #### script\_proxy\_checker.sh
 
@@ -415,6 +416,10 @@ xdg-open
 
 Use a video as desktop background with xwinwrap. I have no idea why anybody 
 would want to but it's a funny trick
+
+#### script\_zfs\_private.sh
+
+A script to mount an encrypted ZFS dataset. Mostly the equivalent of script\_private.sh
 
 #### showip.c
 
