@@ -2,6 +2,10 @@
 
 a collection of personal scripts. A few worked way back in time, some need a complete rewrite but 90% are perfectly usable.
 
+#### backlight\_change.sh
+
+Increase or decrease the screen's backlight. Should work with any backlight driver
+
 ####  bigpkg.py
 
 List Archlinux's installed packages by size. By Allan McRae
