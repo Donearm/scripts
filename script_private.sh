@@ -67,6 +67,7 @@ case $1 in
 			sudo $CRYPTS luksOpen $partition $MAPPER
 			sudo mount /dev/mapper/$MAPPER $DIR
 			if [ $? -eq 0 ]; then
+				start_if_available
 				if start_if_available; then
 					$GONOTIFY &>> ~/.xsession-errors &
 				fi
@@ -78,6 +79,7 @@ case $1 in
 			sudo $CRYPTS  luksOpen $partition $MAPPER
 			sudo mount /dev/mapper/$MAPPER $DIR
 			if [ $? -eq 0 ]; then
+				start_if_available
 				if start_if_available; then
 					$GONOTIFY &>> ~/.xsession-errors &
 				fi
