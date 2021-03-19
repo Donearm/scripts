@@ -435,6 +435,10 @@ A launcher for Sopcast streaming links. I had a Bash function for this
 but it was convoluted to kill the Sopcast process when exiting the video 
 player. Go handles this case much more easily
 
+#### systemd/lock\_suspend.service
+
+Lock, using physlock but any other locker may be used, the session on lid closing signal
+
 #### systemd/network.service
 
 Systemd service for wired networks
