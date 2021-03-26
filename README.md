@@ -435,6 +435,10 @@ A launcher for Sopcast streaming links. I had a Bash function for this
 but it was convoluted to kill the Sopcast process when exiting the video 
 player. Go handles this case much more easily
 
+#### systemd/clean\_imagemagick\_tmpfiles.timer and systemd/clean\_imagemagick\_tmpfiles.service
+
+Timer and service to clean ImageMagick's temporary files created in /tmp and not properly cleaned (see issue [395](https://github.com/ImageMagick/ImageMagick/issues/395))
+
 #### systemd/lock\_suspend.service
 
 Lock, using physlock but any other locker may be used, the session on lid closing signal
