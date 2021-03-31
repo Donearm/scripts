@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
-# Script to open mailto links with mutt under urxvt
+# Script to open mailto links with mutt under the terminal
 
-TERMINAL="urxvt"
+TERMINAL="kitty"
 
 #CMD=$(basename "$0")
 #CMD="${CMD%*-newterminal}"
