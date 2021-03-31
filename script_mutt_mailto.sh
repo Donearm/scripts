@@ -6,6 +6,7 @@ TERMINAL="kitty"
 
 #CMD=$(basename "$0")
 #CMD="${CMD%*-newterminal}"
+MUTTRC="${HOME}/.muttrc"
 CMD="mutt"
 
-exec $TERMINAL -e "$CMD" "$@"
+exec $TERMINAL -e "$CMD" -F "$MUTTRC" "$@"
