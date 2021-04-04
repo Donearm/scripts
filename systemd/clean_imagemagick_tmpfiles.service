@@ -1,7 +1,0 @@
-[Unit]
-Description=Clean huge temporary files made by ImageMagick on /tmp
-
-[Service]
-Nice=19
-IOSchedulingClass=idle
-ExecStart=/usr/bin/find /tmp -maxdepth 1 -type f -name 'magick-*' -o -name 'icat-*' -delete
