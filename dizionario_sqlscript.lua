@@ -7,7 +7,7 @@
 
 -- Multi-language script to look up a dictionary in the form of a Sqlite
 -- file
-package.path = "/mnt/d/Script/lib/?.lua;" .. "/mnt/documents/d/Script/lib/?.lua;" .. package.path
+package.path = "/home/gianluca/documents/Script/lib/?.lua;"  .. package.path
 local os = require("os")
 local ansicolors = require("ansicolors")
 
@@ -26,7 +26,7 @@ function db_exists(dbfile)
 		return nil
 	end
 end
-local DICTIONARY = db_exists('/mnt/d/Lingue/dictionary.db') or db_exists('/mnt/documents/d/Lingue/dictionary.db')
+local DICTIONARY = db_exists('/home/gianluca/documents/Languages/dictionary.db')
 
 ---Help message
 function help()
