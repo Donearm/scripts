@@ -85,6 +85,10 @@ Print the current IP. Both IPv4 and IPv6 are shown
 
 A very raw HD benchmark tool
 
+#### i3lock-script.sh
+
+A script to launch i3lock-color with some specific settings. Nothing too fancy, mostly copied from the official repo
+
 #### imap\_check.py
 
 CLI unread count of my 2 GMail accounts. I used this as input for an AwesomeWM 
