@@ -65,7 +65,7 @@ def clean_npm():
         except:
             print("An error occurred while trying to remove NPM cache")
 
-        print("Cleaned npm cache, freed %dKb of space" % (sum(npm_cache_size)/1000))
+        print("Cleaned npm cache, freed %dKb of space" % (int(npm_cache_size)/1000))
 
 
 def calculate_dir_size(directory):
