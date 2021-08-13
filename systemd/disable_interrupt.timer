@@ -1,0 +1,9 @@
+[Unit]
+Description=Disable troublesome acpi interrupt and keep it disabled
+
+[Timer]
+OnBootSec=5sec
+OnUnitActiveSec=2h
+
+[Install]
+WantedBy=multi-user.target

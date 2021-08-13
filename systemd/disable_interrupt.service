@@ -1,0 +1,8 @@
+[Unit]
+Description=Disable troublesome acpi interrupt
+
+[Service]
+ExecStart=/usr/bin/bash -c 'echo "disable" > /sys/firmware/acpi/interrupts/gpe19'
+
+[Install]
+WantedBy=multi-user.target

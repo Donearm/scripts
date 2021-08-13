@@ -443,6 +443,10 @@ player. Go handles this case much more easily
 
 Timer and service to clean ImageMagick's temporary files created in /tmp and not properly cleaned (see issue [395](https://github.com/ImageMagick/ImageMagick/issues/395))
 
+#### systemd/disable\_interrupt.service and systemd/disable\_interrupt.timer
+
+Timer and service to disable a misbeaving acpi interrupt (happens with some specific hardware or BIOSes)
+
 #### systemd/lock\_suspend.service
 
 Lock, using physlock but any other locker may be used, the session on lid closing signal
