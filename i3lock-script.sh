@@ -8,7 +8,7 @@ W='#fff0021'  # wrong
 V='#1fc95a'  # verifying
 
 i3lock \
---blur 5 \
+--blur 7 \
 --bar-indicator \
 --bar-pos y+h \
 --bar-direction 1 \
