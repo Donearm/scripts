@@ -5,5 +5,5 @@ Before=shutdown.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/cp /mnt/documents/d/Stuff/hosts /etc/hosts
+ExecStart=/usr/bin/cp /mnt/documents/Stuff/hosts /etc/hosts
 Restart=on-failure
