@@ -26,6 +26,7 @@ xdg-mime default $VIDEOPLAYER video/mkv
 xdg-mime default $VIDEOPLAYER video/mpeg
 xdg-mime default $VIDEOPLAYER video/avi
 xdg-mime default $VIDEOPLAYER video/x-msvideo
+xdg-mime default $VIDEOPLAYER video/webm
 xdg-mime default $VIDEOPLAYER video/*
 
 xdg-mime default $VIDEOPLAYER application/ogg
