@@ -22,6 +22,7 @@ shittyfiles = [
     '~/.viminfo',                       # configured to be moved to ~/.cache/vim/viminfo, but it is still sometimes created...
     '~/.cache/chromium/',               # Chromium cache
     '~/.cache/BraveSoftware/',          # Brave browser cache
+    '~/.cache/vivaldi/',                # Vivaldi browser cache
     '~/.cache/ranger/',                 # ranger image/video previews' cache
     '~/.cache/mesa/',
     '~/.cache/mesa_shader_cache/',
