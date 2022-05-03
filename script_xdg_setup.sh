@@ -19,6 +19,7 @@ BROWSER_ARRAY=('text/html',
 )
 IMAGES_ARRAY=('image/jpeg',
 	'image/pjpeg',
+	'image/jpg',
 	'image/png',
 	'image/gif/',
 	'image/webp',
