@@ -21,7 +21,7 @@ IMAGES_ARRAY=('image/jpeg',
 	'image/pjpeg',
 	'image/jpg',
 	'image/png',
-	'image/gif/',
+	'image/gif',
 	'image/webp',
 	'image/*'
 )
