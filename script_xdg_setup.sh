@@ -2,7 +2,7 @@
 #
 # Raw and quick script to set up the file's association for xdg-open
 
-IMAGEVIEWER="feh.desktop"
+IMAGEVIEWER="imv-folder.desktop"
 VIDEOPLAYER="mpv.desktop"
 EBOOKREADER="org.pwmt.zathura.desktop"
 DOCREADER="org.pwmt.zathura.desktop"
