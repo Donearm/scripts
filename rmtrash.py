@@ -24,6 +24,8 @@ shittyfiles = [
     '~/.cache/BraveSoftware/',          # Brave browser cache
     '~/.cache/vivaldi/',                # Vivaldi browser cache
     '~/.cache/ranger/',                 # ranger image/video previews' cache
+    '~/.config/Code - OSS/Cache/',      # VSCode cache
+    '~/.config/Code - OSS/Code Cache/', # VSCode cache
     '~/.cache/mesa/',
     '~/.cache/mesa_shader_cache/',
     '~/.cache/electron/',
