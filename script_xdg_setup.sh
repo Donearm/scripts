@@ -38,6 +38,7 @@ DOCUMENTS_ARRAY=('application/pdf',
 	'application/postscript',
 # Djvu files open with Zathura (needs zathura-djvu package)
 	'image/vnd.djvu',
+	'image/x-djvu',
 	'application/vnd.ms-excel',
 	'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
 	'application/vnd.ms-powerpoint',
