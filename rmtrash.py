@@ -29,6 +29,7 @@ shittyfiles = [
     '~/.cache/mesa/',
     '~/.cache/mesa_shader_cache/',
     '~/.cache/electron/',
+    '~/.mozilla/firefox/Crash Reports/', # Do we need these? I don't think so
     '~/.nvm/.cache/',
     '~/.ACEStream/.acestream_cache/',   # Acestream cache
     '~/.thumbnails/normal/'             # I don't care about thumbs...
