@@ -7,6 +7,7 @@ import shutil
 
 shittyfiles = [
     '~/.adobe',                         # Flash crap
+    '~/.cargo/registry/cache/',         # Cargo rust's cache
     '~/.macromedia',                    # Flash crap
     '~/.recently-used',
     '~/.local/share/recently-used.xbel',
@@ -23,13 +24,21 @@ shittyfiles = [
     '~/.cache/chromium/',               # Chromium cache
     '~/.cache/BraveSoftware/',          # Brave browser cache
     '~/.cache/vivaldi/',                # Vivaldi browser cache
+    '~/.cache/vivaldi/Default/Service Worker/CacheStorage/',                # Vivaldi browser cache
     '~/.cache/ranger/',                 # ranger image/video previews' cache
     '~/.config/Code - OSS/Cache/',      # VSCode cache
+    '~/.config/Code - OSS/CachedData/',      # VSCode cache
     '~/.config/Code - OSS/Code Cache/', # VSCode cache
+    '~/.config/Code - OSS/Service Worker/ScriptCache/', # VSCode cache
+    '~/.config/Code - OSS/Service Worker/CacheStorage/', # VSCode cache
+    '~/.config/tutanota-desktop/Cache/',    # Tutanota cache
+    '~/.config/Microsoft/Microsoft Teams/Code Cache/', # Teams cache
     '~/.cache/mesa/',
     '~/.cache/mesa_shader_cache/',
     '~/.cache/electron/',
     '~/.mozilla/firefox/Crash Reports/', # Do we need these? I don't think so
+    '~/.config/chromium/Default/Service Worker/CacheStorage/', # This neither
+    '~/.config/iridium/Default/Service Worker/CacheStorage/', # Iridium cache
     '~/.nvm/.cache/',
     '~/.ACEStream/.acestream_cache/',   # Acestream cache
     '~/.thumbnails/normal/'             # I don't care about thumbs...
