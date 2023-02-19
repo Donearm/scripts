@@ -7,7 +7,7 @@ import shutil
 
 shittyfiles = [
     '~/.adobe',                         # Flash crap
-    '~/.cargo/registry/cache/',         # Cargo rust's cache
+    '~/.cargo/registry/',         # Cargo rust's cache
     '~/.macromedia',                    # Flash crap
     '~/.recently-used',
     '~/.local/share/recently-used.xbel',
