@@ -7,7 +7,8 @@ User=%I
 Type=forking
 Environment=DISPLAY=:0
 #ExecStart=/usr/bin/physlock -mp 'Say, friend, and enter'
-ExecStart=/home/gianluca/documents/Script/i3lock-script.sh
+#ExecStart=/home/gianluca/documents/Script/i3lock-script.sh
+ExecStart=/home/gianluca/documents/Script/script_lock_screen.sh
 ExecStartPost=/usr/bin/sleep 1
 
 [Install]

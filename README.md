@@ -322,6 +322,12 @@ Convert an IPv4 address to its IPv6 equivalent
 
 Print the number of files in each subdirectory of a given directory
 
+#### script\_lock\_screen.sh
+
+A double script that launches on suspend. If running under Wayland, it uses 
+`swaylock` to lock the screen, otherwise it is assumed it is X11 and uses 
+`i3lock`
+
 #### script\_loop\_ff\_profile.sh
 
 Move Firefox profiles in a file mounted in memory
