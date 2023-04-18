@@ -1,5 +1,5 @@
 [Unit]
-Description=Lock X session using slock before suspend
+Description=Lock X session before suspend
 Before=suspend.target
 
 [Service]
