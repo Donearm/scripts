@@ -457,6 +457,11 @@ Timer and service to disable a misbeaving acpi interrupt (happens with some spec
 
 Lock, using physlock but any other locker may be used, the session on lid closing signal
 
+#### systemd/lock\_on\_lid\_close.sh
+
+A post and pre hook to lock after and before suspend when running under 
+Wayland. Not used anymore, left as an example of these hooks
+
 #### systemd/network.service
 
 Systemd service for wired networks
