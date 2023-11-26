@@ -8,18 +8,8 @@ W='#fff0021'  # wrong
 V='#1fc95a'  # verifying
 
 i3lock \
---blur 7 \
---bar-indicator \
---bar-pos y+h \
---bar-direction 1 \
---bar-max-height 50 \
---bar-base-width 50 \
---bar-color 1cd2ee \
---keyhl-color fffefe \
---bar-periodic-step 50 \
---bar-step 50 \
---redraw-thread \
-\
+-i ~/documents/Images/linuxmasterrace-archlinux-black.png \
+-C \
 --clock \
 --force-clock \
 --time-pos x+5:y+h-80 \
@@ -36,3 +26,15 @@ i3lock \
 --verif-color ffffffff \
 --wrong-color ffffffff \
 --modif-pos -50:-50
+#--blur 7 \
+#--bar-indicator \
+#--bar-pos y+h \
+#--bar-direction 1 \
+#--bar-max-height 50 \
+#--bar-base-width 50 \
+#--bar-color 1cd2ee \
+#--keyhl-color fffefe \
+#--bar-periodic-step 50 \
+#--bar-step 50 \
+#--redraw-thread \
+#\
