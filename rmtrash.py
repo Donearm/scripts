@@ -25,6 +25,12 @@ shittyfiles = [
     '~/.cache/BraveSoftware/',          # Brave browser cache
     '~/.cache/vivaldi/',                # Vivaldi browser cache
     '~/.cache/vivaldi/Default/Service Worker/CacheStorage/',                # Vivaldi browser cache
+    '~/.config/thorium/Default/Service Worker/CacheStorage/',       # Thorium browser cache
+    '~/.cache/thorium/Default/Cache/',                      # Thorium browser cache
+    '~/.cache/thorium/Default/Code Cache/',                 # Thorium browser cache
+    '~/.cache/iridium/Default/Cache/',                      # Iridium cache
+    '~/.cache/iridium/Default/Code Cache/',                 # Iridium cache
+    '~/.config/iridium/Default/Service Worker/CacheStorage/', # Iridium cache
     '~/.cache/ranger/',                 # ranger image/video previews' cache
     '~/.config/Code - OSS/Cache/',      # VSCode cache
     '~/.config/Code - OSS/CachedData/',      # VSCode cache
@@ -36,10 +42,11 @@ shittyfiles = [
     '~/.cache/mesa/',
     '~/.cache/mesa_shader_cache/',
     '~/.cache/electron/',
+    '~/.cache/calibre',
     '~/.mozilla/firefox/Crash Reports/', # Do we need these? I don't think so
     '~/.config/chromium/Default/Service Worker/CacheStorage/', # This neither
-    '~/.config/iridium/Default/Service Worker/CacheStorage/', # Iridium cache
     '~/.nvm/.cache/',
+    '~/.rustup/toolchains/',            # Rust toolchains, unsure if this is safe to remove though
     '~/.ACEStream/.acestream_cache/',   # Acestream cache
     '~/.thumbnails/normal/'             # I don't care about thumbs...
 ]
