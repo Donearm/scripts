@@ -7,7 +7,7 @@ T='#fffefe'  # text
 W='#fff0021'  # wrong
 V='#1fc95a'  # verifying
 
-i3lock -i ~/documents/Images/linuxmasterrace-archlinux-black.png \
+i3lock -i /home/gianluca/documents/Images/linuxmasterrace-archlinux-black.png \
 -C \
 --clock \
 --force-clock \
