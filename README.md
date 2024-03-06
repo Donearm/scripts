@@ -362,6 +362,12 @@ Update the proxy address used by pianobar to access Pandora outside the US
 Make a playlist out of music files in a directory and optionally convert flacs 
 to oggs
 
+#### script\.print\_total\_size\_of\_online\_directory.sh
+
+Print the total size, in MB, of an online directory, publicly accessible, by 
+downloading all the headers of the files, extracting their size in bytes, and 
+summing them up
+
 #### script\_print\_utf8.sh
 
 Output a serie of Unicode characters on the terminal. For the times when you 
