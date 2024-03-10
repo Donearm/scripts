@@ -48,6 +48,7 @@ shittyfiles = [
     '~/.nvm/.cache/',
     '~/.rustup/toolchains/',            # Rust toolchains, unsure if this is safe to remove though
     '~/.ACEStream/.acestream_cache/',   # Acestream cache
+    '~/.local/share/Trash/',            # various apps trash
     '~/.thumbnails/normal/'             # I don't care about thumbs...
 ]
 
