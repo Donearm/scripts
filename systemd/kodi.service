@@ -1,0 +1,28 @@
+[Unit]
+Description=Kodi standalone
+#After=remote-fs.target systemd-user-sessions.service network-online.target nss-lookup.target sound.target bluetooth.target polkit.service upower.service mysqld.service lircd.service
+#Wants=network-online.target polkit.service upower.service
+#Conflicts=getty@tty1.service
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=gianluca
+Group=gianluca
+#EnvironmentFile=-/etc/conf.d/kodi-standalone
+#PAMName=login
+#TTYPath=/dev/tty1
+#ExecStart=/usr/bin/kodi-standalone
+ExecStart=/usr/bin/kodi --standalone -fs
+ExecStop=/usr/bin/killall --exact --wait kodi
+Restart=on-abort
+Nice=1
+RestartSec=2s
+#ExecStop=/usr/bin/kodi-send -a "Quit"
+#StandardInput=tty
+#StandardOutput=journal
+
+[Install]
+#Alias=display-manager.target
+WantedBy=multi-user.target

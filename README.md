@@ -459,6 +459,10 @@ Timer and service to clean ImageMagick's temporary files created in /tmp and not
 
 Timer and service to disable a misbeaving acpi interrupt (happens with some specific hardware or BIOSes)
 
+#### systemd/kodi.service
+
+Systemd service to start Kodi (used on a RaspberryPi)
+
 #### systemd/lock\_suspend.service
 
 Lock, using physlock but any other locker may be used, the session on lid closing signal
