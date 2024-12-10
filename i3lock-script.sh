@@ -7,8 +7,9 @@ T='#fffefe'  # text
 W='#fff0021'  # wrong
 V='#1fc95a'  # verifying
 
-i3lock -i /home/gianluca/documents/Images/linuxmasterrace-archlinux-black.png \
--C \
+#i3lock -i /home/gianluca/documents/Images/linuxmasterrace-archlinux-black.png \
+i3lock -i /home/gianluca/documents/Images/DoutzenKroes-wallpaper04.jpg \
+-F \
 --clock \
 --force-clock \
 --time-pos x+5:y+h-80 \

@@ -85,9 +85,11 @@ Print the current IP. Both IPv4 and IPv6 are shown
 
 A very raw HD benchmark tool
 
-#### i3lock-script.sh
+#### i3lock-script.sh and i3lock-dracula-script.sh
 
-A script to launch i3lock-color with some specific settings. Nothing too fancy, mostly copied from the official repo
+A couple of scripts to launch i3lock-color with some specific settings. Nothing 
+too fancy, mostly copied from the official repo and from the [dracula theme 
+repository](https://github.com/dracula/i3lock-color) for i3lock-color.
 
 #### imap\_check.py
 
