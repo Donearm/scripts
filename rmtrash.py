@@ -6,50 +6,55 @@ import shutil
 
 
 shittyfiles = [
+    '~/.ACEStream/.acestream_cache/',   # Acestream cache
     '~/.adobe',                         # Flash crap
-    '~/.cargo/registry/',         # Cargo rust's cache
-    '~/.macromedia',                    # Flash crap
-    '~/.recently-used',
-    '~/.local/share/recently-used.xbel',
-    '~/Desktop',                        # Firefox creates this
-    '~/.gstreamer-0.10',
-    '~/.pulse',
-    '~/.esd_auth',
-    '~/.config/enchant',
-    '~/.dropbox-dist',
     '~/.bazaar/',                       # bzr insists on creating files holding default values
     '~/.bzr.log',
-    '~/.nv/',
-    '~/.viminfo',                       # configured to be moved to ~/.cache/vim/viminfo, but it is still sometimes created...
-    '~/.cache/chromium/',               # Chromium cache
     '~/.cache/BraveSoftware/',          # Brave browser cache
-    '~/.cache/vivaldi/',                # Vivaldi browser cache
-    '~/.cache/vivaldi/Default/Service Worker/CacheStorage/',                # Vivaldi browser cache
-    '~/.config/thorium/Default/Service Worker/CacheStorage/',       # Thorium browser cache
-    '~/.cache/thorium/Default/Cache/',                      # Thorium browser cache
-    '~/.cache/thorium/Default/Code Cache/',                 # Thorium browser cache
+    '~/.cache/calibre',
+    '~/.cache/chromium/',               # Chromium cache
+    '~/.cache/Cypress',
+    '~/.cache/electron/',
+    '~/.cache/hugo_cache',
     '~/.cache/iridium/Default/Cache/',                      # Iridium cache
     '~/.cache/iridium/Default/Code Cache/',                 # Iridium cache
-    '~/.config/iridium/Default/Service Worker/CacheStorage/', # Iridium cache
+    '~/.cache/mesa/',
+    '~/.cache/mesa_shader_cache/',
     '~/.cache/ranger/',                 # ranger image/video previews' cache
+    '~/.cache/thorium/Default/Cache/',                      # Thorium browser cache
+    '~/.cache/thorium/Default/Code Cache/',                 # Thorium browser cache
+    '~/.cache/thumbnails/'              # thumbnails
+    '~/.cache/vivaldi/',                # Vivaldi browser cache
+    '~/.cache/vivaldi/Default/Service Worker/CacheStorage/',                # Vivaldi browser cache
+    '~/.cache/zen',                     # Zen browser cache
+    '~/.cargo/registry/',               # Cargo rust's cache
+    '~/.config/chromium/Default/Service Worker/CacheStorage/', # This neither
     '~/.config/Code - OSS/Cache/',      # VSCode cache
     '~/.config/Code - OSS/CachedData/',      # VSCode cache
     '~/.config/Code - OSS/Code Cache/', # VSCode cache
     '~/.config/Code - OSS/Service Worker/ScriptCache/', # VSCode cache
     '~/.config/Code - OSS/Service Worker/CacheStorage/', # VSCode cache
-    '~/.config/tutanota-desktop/Cache/',    # Tutanota cache
+    '~/.config/enchant',
+    '~/.config/iridium/Default/Service Worker/CacheStorage/', # Iridium cache
     '~/.config/Microsoft/Microsoft Teams/Code Cache/', # Teams cache
-    '~/.cache/mesa/',
-    '~/.cache/mesa_shader_cache/',
-    '~/.cache/electron/',
-    '~/.cache/calibre',
-    '~/.mozilla/firefox/Crash Reports/', # Do we need these? I don't think so
-    '~/.config/chromium/Default/Service Worker/CacheStorage/', # This neither
-    '~/.nvm/.cache/',
-    '~/.rustup/toolchains/',            # Rust toolchains, unsure if this is safe to remove though
-    '~/.ACEStream/.acestream_cache/',   # Acestream cache
+    '~/.config/thorium/Default/Service Worker/CacheStorage/',       # Thorium browser cache
+    '~/.config/tutanota-desktop/Cache/',    # Tutanota cache
+    '~/Desktop',                        # Firefox creates this
+    '~/.dropbox-dist',
+    '~/.esd_auth',
+    '~/.gstreamer-0.10',
+    '~/.local/share/recently-used.xbel',
     '~/.local/share/Trash/',            # various apps trash
-    '~/.thumbnails/normal/'             # I don't care about thumbs...
+    '~/.macromedia',                    # Flash crap
+    '~/.mozilla/firefox/Crash Reports/', # Do we need these? I don't think so
+    '~/.nv/',
+    '~/.nvm/.cache/',
+    '~/.openjfx/',
+    '~/.pulse',
+    '~/.recently-used',
+    '~/.rustup/toolchains/',            # Rust toolchains, unsure if this is safe to remove though
+    '~/.thumbnails/normal/',            # I don't care about thumbs...
+    '~/.viminfo',                       # configured to be moved to ~/.cache/vim/viminfo, but it is still sometimes created...
 ]
 
 NPMCACHEDIR="~/.npm/_cacache/"
