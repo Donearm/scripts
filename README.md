@@ -35,6 +35,12 @@ Browse (sub)reddits with the Reddit client cortex. Totally an hack, subscribing
 them on Reddit is much easier but I didn't want to read all my subscriptions 
 each time so I wrote this script to choose what and when to browse
 
+#### csv\_to\_md\_files.py
+
+A script, not mine, that converts a CSV file to a series of markdown files 
+based off the first column of the CSV file. It is useful to export sheets from 
+Excel or GDocs to markdown to be edited then in Obsidian
+
 #### dayoftheweek.py
 
 Not my script originally, I just made it Python 3.2 compatible
