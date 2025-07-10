@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
 # credit: https://github.com/lahwaacz/Scripts/blob/master/toggle-touchpad.sh
 
