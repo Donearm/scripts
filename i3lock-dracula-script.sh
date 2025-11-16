@@ -12,7 +12,7 @@ blue='#6272a4'
 cyan='#8be9fd'
 green='50fa7b'
 
-i3lock -i /home/gianluca/documents/Images/DoutzenKroes-wallpaper04.jpg \
+i3lock -i /home/gianluca/documents/Images/linuxmasterrace-archlinux-black.png \
   -F \
   --insidever-color=$selection$alpha \
   --insidewrong-color=$selection$alpha \
