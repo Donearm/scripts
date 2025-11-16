@@ -128,9 +128,12 @@ def rmtrash():
                 files_size.append(os.stat(f).st_size)
 
             if os.path.isfile(f):
-                os.remove(f)
+                try: 
+                    os.remove(f)
+                except PermissionError:
+                    print("Couldn't delete file %s", f)
             else:
-                shutil.rmtree(f)
+                shutil.rmtree(f, ignore_errors=True)
         print("Cleaned files, freed %dKb of space" % (sum(files_size)/1000))
 
 if __name__ == '__main__':
