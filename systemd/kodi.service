@@ -1,28 +1,30 @@
 [Unit]
-Description=Kodi standalone
+Description=Kodi standalone (X11)
 #After=remote-fs.target systemd-user-sessions.service network-online.target nss-lookup.target sound.target bluetooth.target polkit.service upower.service mysqld.service lircd.service
-#Wants=network-online.target polkit.service upower.service
 #Conflicts=getty@tty1.service
-Requires=network-online.target
-After=network-online.target
+#Wants=network-online.target polkit.service upower.service
+#
+After=systemd-user-sessions.service network.target sound.target network-online.target
 
 [Service]
-Type=oneshot
-User=gianluca
-Group=gianluca
+User=pi
+Group=pi
+#
+Type=simple
 #EnvironmentFile=-/etc/conf.d/kodi-standalone
-#PAMName=login
-#TTYPath=/dev/tty1
+PAMName=login
+TTYPath=/dev/tty1
+#ExecStart=/usr/bin/xinit /usr/bin/kodi-standalone -- :0 -quiet -nolisten tcp vt1
+#ExecStart=/usr/bin/kodi --standalone -fs
 #ExecStart=/usr/bin/kodi-standalone
-ExecStart=/usr/bin/kodi --standalone -fs
-ExecStop=/usr/bin/killall --exact --wait kodi
+ExecStart=/usr/bin/flatpak run --filesystem=/run/udev:ro --filesystem=home tv.kodi.Kodi --standalone --windowing=gbm
+#ExecStop=/usr/bin/killall --exact --wait kodi.bin
+ExecStop=/usr/bin/flatpak kill tv.kodi.Kodi
 Restart=on-abort
 Nice=1
-RestartSec=2s
-#ExecStop=/usr/bin/kodi-send -a "Quit"
 #StandardInput=tty
 #StandardOutput=journal
 
 [Install]
-#Alias=display-manager.target
+#Alias=display-manager.service
 WantedBy=multi-user.target

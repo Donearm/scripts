@@ -469,7 +469,27 @@ Timer and service to disable a misbeaving acpi interrupt (happens with some spec
 
 #### systemd/kodi.service
 
-Systemd service to start Kodi (used on a RaspberryPi)
+Systemd service to start Kodi
+
+#### systemd/lidarr.service
+
+Systemd service to start lidarr
+
+#### systemd/prowlarr.service
+
+Systemd service to start prowlarr
+
+#### systemd/qbittorrent-nox@.service
+
+Systemd service to start qbittorrent
+
+#### systemd/radarr.service
+
+Systemd service to start radarr
+
+#### systemd/sonarr.service
+
+Systemd service to start sonarr
 
 #### systemd/lock\_suspend.service
 
