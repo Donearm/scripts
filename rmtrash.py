@@ -21,11 +21,14 @@ shittyfiles = [
     '~/.cache/mesa/',
     '~/.cache/mesa_shader_cache/',
     '~/.cache/ranger/',                 # ranger image/video previews' cache
+    '~/.cache/nvidia/GLCache/'
     '~/.cache/thorium/Default/Cache/',                      # Thorium browser cache
     '~/.cache/thorium/Default/Code Cache/',                 # Thorium browser cache
     '~/.cache/thumbnails/'              # thumbnails
+    '~/.cache/thunderbird/'             # Thunderbird cache
     '~/.cache/vivaldi/',                # Vivaldi browser cache
     '~/.cache/vivaldi/Default/Service Worker/CacheStorage/',                # Vivaldi browser cache
+    '~/.cache/yay/',
     '~/.cache/zen',                     # Zen browser cache
     '~/.cargo/registry/',               # Cargo rust's cache
     '~/.config/chromium/Default/Service Worker/CacheStorage/', # This neither
@@ -39,6 +42,7 @@ shittyfiles = [
     '~/.config/Microsoft/Microsoft Teams/Code Cache/', # Teams cache
     '~/.config/thorium/Default/Service Worker/CacheStorage/',       # Thorium browser cache
     '~/.config/tutanota-desktop/Cache/',    # Tutanota cache
+    '~/.config/Z-Library/Cache/',           # Z-Library app cache
     '~/Desktop',                        # Firefox creates this
     '~/.dropbox-dist',
     '~/.esd_auth',
@@ -54,12 +58,14 @@ shittyfiles = [
     '~/.recently-used',
     '~/.rustup/toolchains/',            # Rust toolchains, unsure if this is safe to remove though
     '~/.thumbnails/normal/',            # I don't care about thumbs...
+    '~/documents/.Trash-1000/',         # don't know what creates this but it is just deleted files
     '~/.viminfo',                       # configured to be moved to ~/.cache/vim/viminfo, but it is still sometimes created...
 ]
 
 NPMCACHEDIR="~/.npm/_cacache/"
 GOBUILDCACHEDIR="~/.cache/go-build/"
 GOMODCACHEDIR="~/.go/pkg/mod/"
+YARNCACHEDIR="~/.cache/yarn/"
 
 def clean_go_build():
     """Go build caches can be removed with its own command. Running it instead of removing the directory manually"""
@@ -93,6 +99,20 @@ def clean_npm():
 
         print("Cleaned npm cache, freed %dKb of space" % (int(npm_cache_size)/1000))
 
+def clean_yarn():
+    """Yarn has a command, yarn cache clean, to actually clean its cache. Running it instead of removing the directory manually"""
+
+    yarn_cache_size = calculate_dir_size(YARNCACHEDIR)
+    print("Cleaning Yarn cache...")
+    print("Current cache size is %dMb" % yarn_cache_size)
+    # If cache is empty already, skip cleaning
+    if yarn_cache_size > 0:
+        try:
+            os.system("yarn cache clean --force &> /dev/null")
+        except:
+            print("An error occurred while trying to remove Yarn cache")
+
+        print("Cleaned yarn cache, freed %dKb of space" % (int(yarn_cache_size)/1000))
 
 def calculate_dir_size(directory):
     """Walk through each directory and subdirectory of a path and calculate the total size of directories + files in it"""
